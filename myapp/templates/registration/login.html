@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load widget_tweaks %}
+
+<header class="masthead">
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 ml-auto">
+                </div>
+
+                <div class="col-md-4 ml-auto text-white">
+                    <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-heading text-white"><strong>LOGIN</strong></h2><br>
+                    </div>
+                    <form method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                        <div class="form-group text-white">
+                            {{ field.label_tag }}<br>
+                            {% render_field field class="form-control" %}
+                            <!--{% if field.help_text %}-->
+                            <!--<small style="color: grey">{{ field.help_text }}</small>-->
+                            <!--{% endif %}-->
+                            {% for error in field.errors %}
+                            <p style="color: red">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        {% endfor %}
+                        {% if form.non_field_errors %}
+                          <div class="alert alert-danger" role="alert">
+                            {% for error in form.non_field_errors %}
+                              <p{% if forloop.last %} class="mb-0"{% endif %}>Username dan password yang anda masukan salah</p>
+                            {% endfor %}
+                          </div>
+                        {% endif %}
+                        <button type="submit" class="btn btn-primary">Masuk</button>&nbsp; Lupa password?  <a
+                            href="#">Klik disini</a
+                    </form>
+                </div>
+                <div class="col-md-4 ml-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+{% endblock %}

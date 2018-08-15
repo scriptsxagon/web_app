@@ -1,0 +1,17 @@
+Django==1.11
+django_extensions
+gunicorn==19.6.0
+psycopg2==2.7.0
+celery==4.1.1
+redis
+#django-allauth
+oauth2client
+google-api-python-client
+django-widget-tweaks
+pyyaml
+django-ckeditor
+pillow
+django-allauth
+social-auth-app-django
+pymessenger
+dj-config-url
