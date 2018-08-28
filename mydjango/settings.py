@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'myapp',
 ]
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
