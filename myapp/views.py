@@ -1,10 +1,14 @@
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 
 from myapp.forms import SignUpForm
 
 def index(request):
+    if not request.user.is_authenticated():
         return render(request,'index.html')
+    else:
+        return render(request,'index_login.html')
 
 def signup(request):
     if request.method == 'POST':
