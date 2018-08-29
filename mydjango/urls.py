@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from myapp import views
 from django.contrib.auth import views as auth_views
+from myapp import views as accounts_views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
@@ -28,6 +29,7 @@ urlpatterns = [
     name='password_change'),
     url(r'^password_change/done/$', auth_views.PasswordChangeDoneView.as_view(template_name='password_change_done.html'),
     name='password_change_done'),
+    url(r'^settings/account/$', accounts_views.UserUpdateView.as_view(), name='my_account'),
     url(r'^reset/$',
         auth_views.PasswordResetView.as_view(
             template_name='registration/password_reset_form.html',
