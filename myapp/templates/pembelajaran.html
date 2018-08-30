@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<header class="masthead">
+    </br>
+  <section class="portfolio mb-3" id="portfolio">
+       <div class="container text-center">
+    <h2 class="mb-4 text-white">CARILAH ILMU SEBANYAK BANYAKNYA.</h2>
+    </div>
+      <div class="container">
+                <div class="row">
+
+                {% for course in courses %}
+                <div class="card mr-2" style="width: 20rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ course.name }}</h5>
+                        <p class="card-text"> {{ course.summary | safe | truncatewords:"40"|linebreaks }}</p>
+                        <!--<p><a href="{{ url_for_full_content }}">Tampilkan lengkap</a></p>-->
+                        <a href="/course/{{ course.id }}/0/" class="btn btn-primary">Mulai</a>
+                    </div>
+                </div>
+                {% endfor %}
+                </div>
+      </div>
+  </section>
+</header>
+{% endblock %}

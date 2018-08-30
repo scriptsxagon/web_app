@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import UpdateView
+from myapp.models import Lesson, Course
 
 from myapp.forms import SignUpForm
 
@@ -15,9 +16,6 @@ def index(request):
         return render(request,'index_login.html')
 
 def signup(request):
-    if request.user.is_authenticated():
-        return render(request, 'index_login.html')
-    else:
             if request.method == 'POST':
                 form = SignUpForm(request.POST)
                 if form.is_valid():
@@ -41,19 +39,25 @@ class UserUpdateView(UpdateView):
     def get_object(self):
         return self.request.user
 
+def pembelajaran(request):
+    course = Course.objects.all().order_by('order')
+    return render(request, 'pembelajaran.html', {'courses': course})
+
 @login_required
-def materi(request, id, pelajaran_id):
-    s_pelajaran = Lesson.objects.filter(course__id=id).order_by('order')
-    materi = Materi.objects.filter(id=id)[0]
-    pelajaran_aktif = int(pelajaran_id)
-    if pelajaran_id == '0':
-        konten = materi.singkat
+def course(request, id, lesson_id):
+    lessons = Lesson.objects.filter(course__id=id).order_by('order')
+    course = Course.objects.filter(id=id)[0]
+    active_lesson = int(lesson_id)
+    if lesson_id == '0':
+        content = course.summary
     else:
-        data = Pelajaran.objects.filter(id=pelajaran_id).order_by('order')[0]
-        konten = data.konten
-    return render(request, 'pelajaran.html', {'s_pelajaran': s_pelajaran,
-                                           'materi': materi,
-                                           'konten': konten,
-                                           'pelajaran_aktif': pelajaran_aktif}
+        data = Lesson.objects.filter(id=lesson_id).order_by('order')[0]
+        content = data.konten
+    return render(request, 'lesson.html', {'lessons': lessons,
+                                           'course': course,
+                                           'content': content,
+                                           'active_lesson': active_lesson}
                   )
+
+
 # Create your views here.

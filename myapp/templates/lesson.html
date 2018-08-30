@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <header class="masthead">
+        </br></br>
+      <section class="portfolio" id="portfolio">
+        <a class="list-group-item list-group-item-action {% if active_lesson == 0 %} active {% endif %}" href="/course/{{course.id}}/0/">Apa yang akan kamu pelajari</a>
+        {% for lesson in lessons %}
+        <a class="list-group-item list-group-item-action {% if active_lesson == lesson.id %} active {% endif %}" href="/course/{{course.id}}/{{lesson.id}}/">{{ lesson.name }}</a>
+        {% endfor %}
+        </div>
+    </div>
+
+    <div class="row" style="margin-left: 20px; margin-top: 100px; margin-right: 20px; text-align: justify;">
+        <p>
+            {{ content|safe }}
+        </p>
+    </div>
+      </section>
+    </header>
+{% endblock %}
