@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 <header class="masthead">
+    </br>
   <section class="portfolio mb-3" id="portfolio">
-      <div class="container text-center">
-        <h3 class="mb-4 text-white">CARILAH ILMU SEBANYAK BANYAKNYA.</h3>
-      </div>
+       <div class="container text-center">
+    <h2 class="mb-4 text-white">CARILAH ILMU SEBANYAK BANYAKNYA.</h2>
+    </div>
       <div class="container">
                 <div class="row">
 
@@ -19,32 +20,27 @@
                 {% endfor %}
                 </div>
       </div>
-
       {% if courses.has_other_pages %}
-      <nav aria-label="Page navigation example" style="padding-top:25px;">
-          <ul class="pagination justify-content-center">
-            {% if courses.has_previous %}
-              <li class="page-item"><a href="?page={{ courses.previous_page_number }}" class="page-link">&laquo;</a></li>
-            {% else %}
-              <li class="disabled"><span class="page-link">&laquo;</span></li>
-            {% endif %}
-
-            {% for i in courses.paginator.page_range %}
-              {% if courses.number == i %}
-                <li class="active page-item"><span class="page-link">{{ i }} <span class="sr-only">(current)</span></span></li>
-              {% else %}
-                <li class="page-item"><a href="?page={{ i }}" class="page-link">{{ i }}</a></li>
-              {% endif %}
-            {% endfor %}
-
-            {% if courses.has_next %}
-              <li class="page-item"><a href="?page={{ courses.next_page_number }}" class="page-link">&raquo;</a></li>
-            {% else %}
-              <li class="page-item"><span class="page-link">&raquo;</span></li>
-            {% endif %}
-          </ul>
-        {% endif %}
-      </nav>
+  <ul class="pagination">
+    {% if courses.has_previous %}
+      <li><a href="?page={{ courses.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in courses.paginator.page_range %}
+      {% if courses.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if courses.has_next %}
+      <li><a href="?page={{ courses.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
   </section>
 </header>
 {% endblock %}
