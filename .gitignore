@@ -5,5 +5,3 @@ venv/
 
 
 # SQLite database files
-
-*.sqlite
