@@ -4,9 +4,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
-from django.views.generic import UpdateView
+from django.views.generic import UpdateView,ListView
 from myapp.models import Lesson, Course
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from myapp.forms import SignUpForm
 
 def index(request):
@@ -40,8 +40,18 @@ class UserUpdateView(UpdateView):
         return self.request.user
 
 def pembelajaran(request):
-    course = Course.objects.all().order_by('order')
-    return render(request, 'pembelajaran.html', {'courses': course})
+    courses = Course.objects.all().order_by('order')
+    page = request.GET.get('page', 1)
+
+    paginator = Paginator(courses, 4)
+    try:
+        courses = paginator.page(page)
+    except PageNotAnInteger:
+        courses = paginator.page(1)
+    except EmptyPage:
+        courses = paginator.page(paginator.num_pages)
+
+    return render(request, 'pembelajaran.html', {'courses': courses})
 
 @login_required
 def course(request, id, lesson_id):
@@ -58,6 +68,7 @@ def course(request, id, lesson_id):
                                            'content': content,
                                            'active_lesson': active_lesson}
                   )
+
 
 
 # Create your views here.
