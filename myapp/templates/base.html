@@ -46,14 +46,15 @@
               data-toggle="dropdown" style="text-transform: uppercase;">{{ user.get_username }}</a>
               <ul class="dropdown-menu">
                   <li class="divider"></li>
-                  <li><a class="nav-item mx-0 mx-lg-1" href="/">Beranda</a></li>
-                  <li><a class="nav-item mx-0 mx-lg-1" href="/settings/account/">Profil</a></li>
-                  <li><a class="nav-item mx-0 mx-lg-1" href="/pembelajaran/">Pelajaran</a></li>
-                  <li><a class="nav-item mx-0 mx-lg-1" href="/password_change/">Ganti Password</a></li>
-                  <li><a class="nav-item mx-0 mx-lg-1" href="/logout/">Logout</a></li>
+                  <li class="dropdown-item"><a class="nav-item mx-0 mx-lg-1" href="/" style="text-decoration:none;">Beranda</a></li>
+                  <li class="dropdown-item"><a class="nav-item mx-0 mx-lg-1" href="/settings/account/" style="text-decoration:none;">Profil</a></li>
+                  <li class="dropdown-item"><a class="nav-item mx-0 mx-lg-1" href="/pembelajaran/" style="text-decoration:none;">Pelajaran</a></li>
+                  <li class="dropdown-item"><a class="nav-item mx-0 mx-lg-1" href="/password_change/" style="text-decoration:none;">Ganti Password</a></li>
+                  <li class="dropdown-item"><a class="nav-item mx-0 mx-lg-1" href="/logout/" style="text-decoration:none;">Logout</a></li>
               </ul>
           </ul>
          {% else %}
+
           <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -73,6 +74,7 @@
           </div>
     </nav>
          {% endif %}
+
    <!-- Bootstrap core JavaScript -->
     <script src="/static/vendor/jquery/jquery.min.js"></script>
     <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
