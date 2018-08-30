@@ -4,7 +4,7 @@
     <header class="masthead">
       <section class="portfolio" id="portfolio">
       <div class="position-absolute">
-        <a class="list-group-item list-group-item-action {% if active_lesson == 0 %} active {% endif %}" href="/course/{{course.id}}/0/">Apa yang akan kamu pelajari</a>
+        <a class="list-group-item list-group-item-action {% if active_lesson == 0 %} active {% endif %}" href="/course/{{course.id}}/0/">{{ course.name }}</a>
         {% for lesson in lessons %}
         <a class="list-group-item list-group-item-action {% if active_lesson == lesson.id %} active {% endif %}" href="/course/{{course.id}}/{{lesson.id}}/">{{ lesson.name }}</a>
         {% endfor %}
