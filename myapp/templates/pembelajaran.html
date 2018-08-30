@@ -1,46 +1,45 @@
 {% extends 'base.html' %}
 {% block content %}
-<header class="masthead">
+    <header class="masthead">
     </br>
-  <section class="portfolio mb-3" id="portfolio">
-       <div class="container text-center">
-    <h2 class="mb-4 text-white">CARILAH ILMU SEBANYAK BANYAKNYA.</h2>
-    </div>
-      <div class="container">
-                <div class="row">
-
-                {% for course in courses %}
-                <div class="card mr-2" style="width: 17.2rem;">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>{{ course.name | truncatewords:"3"}}</b></h5>
-                        <p class="card-text"> {{ course.summary | safe | truncatewords:"15"|linebreaks }}</p>
+      <section class="portfolio mb-3" id="portfolio">
+           <div class="container text-center">
+                <h2 class="mb-4 text-white">CARILAH ILMU SEBANYAK BANYAKNYA.</h2>
+           </div>
+          <div class="container">
+              <div class="row">
+                  {% for course in courses %}
+                    <div class="card mr-2" style="width: 17.2rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>{{ course.name | truncatewords:"3"}}</b></h5>
+                            <p class="card-text"> {{ course.summary | safe | truncatewords:"15"|linebreaks }}</p>
+                        </div>
+                        <a href="/course/{{ course.id }}/0/" class="btn" style="width: 35%; align-item: center;">Mulai</a>
                     </div>
-                    <a href="/course/{{ course.id }}/0/" class="btn" style="width: 35%; align-item: center;">Mulai</a>
-                </div>
+                  {% endfor %}
+              </div>
+          </div>
+          {% if courses.has_other_pages %}
+              <ul class="pagination">
+                {% if courses.has_previous %}
+                  <li><a href="?page={{ courses.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                  <li class="disabled"><span>&laquo;</span></li>
+                {% endif %}
+                {% for i in courses.paginator.page_range %}
+                  {% if courses.number == i %}
+                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                  {% else %}
+                    <li><a href="?page={{ i }}">{{ i }}</a></li>
+                  {% endif %}
                 {% endfor %}
-                </div>
-      </div>
-      {% if courses.has_other_pages %}
-  <ul class="pagination">
-    {% if courses.has_previous %}
-      <li><a href="?page={{ courses.previous_page_number }}">&laquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&laquo;</span></li>
-    {% endif %}
-    {% for i in courses.paginator.page_range %}
-      {% if courses.number == i %}
-        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-      {% else %}
-        <li><a href="?page={{ i }}">{{ i }}</a></li>
-      {% endif %}
-    {% endfor %}
-    {% if courses.has_next %}
-      <li><a href="?page={{ courses.next_page_number }}">&raquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&raquo;</span></li>
-    {% endif %}
-  </ul>
-{% endif %}
-  </section>
-</header>
+                {% if courses.has_next %}
+                  <li><a href="?page={{ courses.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                  <li class="disabled"><span>&raquo;</span></li>
+                {% endif %}
+              </ul>
+          {% endif %}
+      </section>
+    </header>
 {% endblock %}
