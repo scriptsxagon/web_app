@@ -12,7 +12,7 @@
                 <div class="card mr-2" style="width: 17.2rem;">
                     <div class="card-body">
                         <h5 class="card-title"><b>{{ course.name | truncatewords:"3"}}</b></h5>
-                        <p class="card-text"> {{ course.summary | safe | truncatewords:"15"|linebreaks }}</p>
+                        <p class="card-text"> {{ course.summary | safe | truncatewords:"12"|linebreaks }}</p>
                     </div>
                     <a href="/course/{{ course.id }}/0/" class="btn" style="width: 35%; align-item: center;">Mulai</a>
                 </div>
