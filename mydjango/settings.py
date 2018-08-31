@@ -134,5 +134,6 @@ STATICFILES_DIRS = [
 CKEDITOR_UPLOAD_PATH = 'uploads'
 
 LOGIN_REDIRECT_URL = 'index'
+LOGIN_URL='/login/'
 SIGNUP_REDIRECT_URL = 'login'
 LOGOUT_URL = 'logout'
