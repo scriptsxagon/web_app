@@ -37,14 +37,6 @@
 {% block content %}
 {% endblock %}
 
-    <div class="icon-bar">
-      <a href="https://web.facebook.com/devsubang/" class="facebook dot"><i class="fa fa-facebook"></i></a>
-      <a href="https://twitter.com/DevSubang" class="twitter dot"><i class="fa fa-twitter"></i></a>
-      <a href="https://plus.google.com/111764621349388287574" class="google dot"><i class="fa fa-google"></i></a>
-      <a href="https://www.linkedin.com/in/dev-subang-2367b516a/" class="linkedin dot"><i class="fa fa-linkedin"></i></a>
-      <a href="https://www.youtube.com/channel/UC80tBuEeIiwq6AZw5Bwd95w?view_as=subscriber" class="youtube dot"><i class="fa fa-youtube"></i></a>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
@@ -87,8 +79,24 @@
             </div>
           </div>
     </nav>
-<button onclick="topFunction()" id="myBtn" title="Go to top" class="fa fa-chevron-up"></button>
-         {% endif %}
+          {% endif %}
+<!-- tambahan fitur -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top" class="fa fa-chevron-up"></button>
+        <div id="circularMenu" class="circular-menu">
+
+          <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+            <i class="fa fa-align-justify"></i>
+          </a>
+
+          <menu class="items-wrapper">
+            <a target="_blank" href="https://web.facebook.com/devsubang/"class="menu-item fa fa-facebook"></a>
+            <a target="_blank" href="https://twitter.com/DevSubang" class="menu-item fa fa-twitter"></a>
+            <a target="_blank" href="https://plus.google.com/111764621349388287574" class="menu-item fa fa-google"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/dev-subang-2367b516a/" class="menu-item fa fa-linkedin"></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UC80tBuEeIiwq6AZw5Bwd95w?view_as=subscriber" class="menu-item fa fa-youtube"></a>
+          </menu>
+
+        </div>
    <!-- Bootstrap core JavaScript -->
     <script src="/static/vendor/jquery/jquery.min.js"></script>
     <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
