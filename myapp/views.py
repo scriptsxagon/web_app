@@ -39,6 +39,7 @@ class UserUpdateView(UpdateView):
     def get_object(self):
         return self.request.user
 
+@login_required
 def pembelajaran(request):
     courses = Course.objects.all().order_by('order')
     page = request.GET.get('page', 1)
