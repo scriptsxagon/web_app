@@ -1,231 +1,877 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="ip" content="182.0.243.222" />
+	<meta name="post_id" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="CodePolitan" />
+	<title>CodePolitan - Your Learning Journey to Become a Great Programmer</title>
 
-  <head>
+	<!-- FAVICON -->
+	<link rel="apple-touch-icon" sizes="57x57" href="https://www.codepolitan.com/assets/img/icon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://www.codepolitan.com/assets/img/icon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://www.codepolitan.com/assets/img/icon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://www.codepolitan.com/assets/img/icon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://www.codepolitan.com/assets/img/icon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://www.codepolitan.com/assets/img/icon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://www.codepolitan.com/assets/img/icon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://www.codepolitan.com/assets/img/icon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.codepolitan.com/assets/img/icon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="https://www.codepolitan.com/assets/img/icon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://www.codepolitan.com/assets/img/icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://www.codepolitan.com/assets/img/icon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://www.codepolitan.com/assets/img/icon/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="https://www.codepolitan.com/assets/img/icon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<!-- Yoast -->
+	<link rel="canonical" href="https://www.codepolitan.com" />
+	<meta property="og:locale" content="id_ID" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="CodePolitan - Your Learning Journey to Become a Great Programmer" />
+	<meta property="og:description" content="Semua yang perlu kamu ketahui untuk memulai belajar pemrograman dan menjadi seorang programmer. Semua yang kamu butuhkan untuk meningkatkan skill pemrogramanmu agar menjadi great programmer." />
+	<meta property="og:url" content="https://www.codepolitan.com" />
+	<meta property="og:site_name" content="CodePolitan.com" />
+	<meta property="article:publisher" content="https://www.facebook.com/codepolitan" />
 
-    <title>Landing Page - Start Bootstrap Theme</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="/static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	<meta property="og:image" content="https://www.codepolitan.com/assets/img/codepolitan_image.jpg" />
+	<meta property="og:image:width" content="700" />
+	<meta property="og:image:height" content="350" />
+	<!-- / Yoast SEO plugin. -->
 
-    <!-- Custom styles for this template -->
-    <link href="/static/css/landing-page.min.css" rel="stylesheet">
-    <link href="/static/css/plus.css" rel="stylesheet">
+	<link rel="alternate" type="application/rss+xml" title="CodePolitan - Your Learning Journey to Become a Great Programmer" href="https://www.codepolitan.com/feed/" />
+	<meta property="og:title" content="CodePolitan - Your Learning Journey to Become a Great Programmer"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:site_name" content="CodePolitan.com"/>
+	<meta property="og:description" content="Semua yang perlu kamu ketahui untuk memulai belajar pemrograman dan menjadi seorang programmer. Semua yang kamu butuhkan untuk meningkatkan skill pemrogramanmu agar menjadi great programmer." />
+	<meta name="description" content="Semua yang perlu kamu ketahui untuk memulai belajar pemrograman dan menjadi seorang programmer. Semua yang kamu butuhkan untuk meningkatkan skill pemrogramanmu agar menjadi great programmer." />
+	<meta property="description" content="Semua yang perlu kamu ketahui untuk memulai belajar pemrograman dan menjadi seorang programmer. Semua yang kamu butuhkan untuk meningkatkan skill pemrogramanmu agar menjadi great programmer." />
+	<meta property="language" content="Indonesia" />
+	<meta property="revisit-after" content="7" />
+	<meta property="webcrawlers" content="all" />
+	<meta property="rating" content="general" />
+	<meta property="spiders" content="all" />
+	<meta property="robots" content="all" />
 
-  </head>
+	<!-- Dependency -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto:400,300,500,700,100|Lora:400,700' rel='stylesheet' type='text/css'>
+	<link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type='text/css'>
+	<link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type='text/css'>
+	<link href="/static/vendor/cp-tutspaging/tutspaging.css" rel="stylesheet" type='text/css'>
+	<link href="/static/css/mainstyle.min.css" rel="stylesheet" type='text/css'>
+	<link href="/static/css/mainstyle.custom.css" rel="stylesheet" type='text/css'>
 
-  <body>
+			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-light bg-light static-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
-        <a class="btn btn-primary" href="#">Sign In</a>
-      </div>
-    </nav>
+    <!-- Google -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    <!-- Masthead -->
-    <header class="masthead text-white text-center">
-      <div class="overlay"></div>
-      <div class="container">
+	ga('create', 'UA-51093490-1', 'codepolitan.com');
+	ga('send', 'pageview');
+	</script>
+
+    <!-- OneSignal -->
+	<link rel="manifest" href="/manifest.json">
+  	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+  	<script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "a2540447-5236-4ac5-b5b3-b2b8d027e0c9",
+      autoRegister: false,
+      notifyButton: {
+        enable: true /* Set to false to hide */
+      }
+    }]);
+  	</script>
+
+    <!-- Feedbacklite -->
+	<script type="text/javascript">
+	var h = document.getElementsByTagName('head')[0];
+	(function(){
+	var fc = document.createElement('link'); fc.type = 'text/css'; fc.rel = 'stylesheet';
+	fc.href = 'https://product.feedbacklite.com/feedbacklite.css'; h.appendChild(fc);
+	})();
+	var fbl = {'campaign':{'id':1932, 'type':2, 'size':2, 'position':5, 'tab':4, 'control':1}};
+	(function(){
+	var fj = document.createElement('script'); fj.type = 'text/javascript';
+	fj.async = true; fj.src = 'https://product.feedbacklite.com/feedbacklite.js'; h.appendChild(fj);
+	})();
+	</script>
+	<!-- end Feedbacklite -->
+
+    <!-- Codepolitan Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '496143660723921');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=496143660723921&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-default navbar-fixed-top navbar-cp">
+	<!--
+	<div id="head-alert" style="padding:5px;background:#e88b8b;color:#FFF;font-size:5px:" class="text-center">
+		<b>Pemberitahuan</b>, Jam 2 siang kami akan menonaktifkan Codepolitan. Bagi teman-teman yang sedang menulis silahkan save draft terlebih dahulu. &nbsp;&nbsp;<a href="#" id="btn-close-head-alert" class="btn-xs btn-danger">Close</a>
+	</div> -->
+	<div class="container-fluid">
+
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="https://www.codepolitan.com" title="CodePolitan"><img src="https://www.codepolitan.com/assets/img/codepolitan_logo.png" class="logo-img" alt="CodePolitan"></a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li ><a href="https://www.codepolitan.com/articles">UPDATE</a></li>
+				<li ><a target="_blank" href="https://premium.codepolitan.com?utm_source=codepolitan">ONLINE LEARNING</a></li>
+		        <li ><a href="https://www.codepolitan.com/upcoming-event">EVENT</a></li>
+		        <li ><a href="https://devschool.id" class="record-data" data-action="goto-developer-school" data-position="navbar-menu" target="_blank">SCHOOL</a></li>
+		    </ul>
+
+			<ul class="nav navbar-nav navbar-right">
+									<li class="nav-btn"><a href="https://www.codepolitan.com/users/login?callback=https://www.codepolitan.com">LOGIN</a></li>
+					<li class="nav-btn nav-signup"><a href="https://www.codepolitan.com/users/register" class="record-data" data-action="register-account" data-position="general-navbar">SIGN UP</a></li>
+								</ul>
+		</div>
+	</div>
+</nav>
+<!-- END: NAVBAR -->
+
+<!-- MAIN WRAPPER -->
+<div class="cp-wrapper margin-top-no-padding-wrapper">
+
+
+	<section class="cp-jumbotron jumbotron-banner" style="background: url(https://static.cdn-cdpl.com/source/b8e29e8f0b15aab3473fed5df06c9186/bg_premium_banner_dvd.jpg); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+    <div class="container">
+        <h1>Belajar Web Programming Online</h1>
+        <p>
+            Dalam program ini kamu akan belajar secara online dasar-dasar pemrograman web disertai beragam contoh kasus pembuatan aplikasi berbasis web. Kamu juga akan belajar bagaimana membuat website yang telah kamu bangun bisa diakses secara online melalui internet. Bonus DVD Pembelajaran yang akan dikirim ke rumah kamu.
+        </p>
+
+        <div class="margin-lg-top">
+            <a href="https://premium.codepolitan.com/path-web-programmer" target="_blank" class="btn btn-border btn-lg record-data margin-md-right" data-action="goto-premium" data-position="jumbotron">PELAJARI DAHULU</a>
+            <a href="https://premium.codepolitan.com/path-web-programmer#investasi" target="_blank" class="btn btn-cp btn-lg record-data" data-action="goto-premium" data-position="jumbotron">DAFTAR PREMIUM</a>
+        </div>
+    </div>
+</section>
+
+<!--<section class="cp-jumbotron" style="padding-top: 0px; padding-bottom: 0px; text-align: left;">
+    <div class="container-fluid">
         <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <h1 class="mb-5">Build a landing page for your business or project and generate more leads!</h1>
-          </div>
-          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <form>
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+            <div class="col-md-7" style="background: url(https://school.codepolitan.com/resources/themes/default/assets/img/bg_android_cover_mask2.jpg);">
+                <div style="height: 545px; text-align: center; padding-top: 150px;">
+                    <h3 style="font-size: 50px; margin-top: 0px; font-weight: bold;">Buat Aplikasi Android Pertamamu dalam 1 Minggu</h3>
+                    <p style="margin-top: 30px;">Ikuti program Pelatihan Intensif Belajar Membuat Aplikasi Android secara offline selama 1 minggu<br /> di CodePolitan Developer School! Kuota terbatas!</p>
+                    <div class="text-center margin-lg-top"><a href="https://school.codepolitan.com/training-intensif-android" target="_blank" class="btn btn-cp btn-lg record-data" data-action="goto-devschool-android" data-position="jumbotron">Gabung Sekarang!</a></div>
                 </div>
-                <div class="col-12 col-md-3">
-                  <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Icons Grid -->
-    <section class="features-icons bg-light text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <div class="features-icons-icon d-flex">
-                <i class="icon-screen-desktop m-auto text-primary"></i>
-              </div>
-              <h3>Fully Responsive</h3>
-              <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <div class="features-icons-icon d-flex">
-                <i class="icon-layers m-auto text-primary"></i>
-              </div>
-              <h3>Bootstrap 4 Ready</h3>
-              <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+            <div class="col-md-5">
+                <a href="https://school.codepolitan.com/training-intensif-basic-front-end-web-development" target="_blank"><div style="background: url(http://www.produktif.net/wp-content/uploads/2017/12/promo_frontend_banner.jpg) center center; height: 250px; margin-top: 15px; margin-bottom: 15px; "> </div></a>
+
+                <a href="http://www.produktif.net/product/kaos-eksklusif-codepolitan/" target="_blank"><div style="background: url(http://www.produktif.net/wp-content/uploads/2017/10/cover_tshirt_codepolitan_update.jpg) center center; height: 250px; margin-top: 15px; margin-bottom: 15px; "> </div></a>
             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-              <div class="features-icons-icon d-flex">
-                <i class="icon-check m-auto text-primary"></i>
-              </div>
-              <h3>Easy to Use</h3>
-              <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
-            </div>
-          </div>
+
         </div>
-      </div>
-    </section>
 
-    <!-- Image Showcases -->
-    <section class="showcase">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters">
+    </div>
+</section>-->
 
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
-          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>Fully Responsive Design</h2>
-            <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
-          <div class="col-lg-6 my-auto showcase-text">
-            <h2>Updated For Bootstrap 4</h2>
-            <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
-          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>Easy to Use &amp; Customize</h2>
-            <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
-          </div>
-        </div>
-      </div>
-    </section>
+	<!-- SECTION JUMBOTRON
+	<section class="home-jumbotron">
+		<div class="container">
+			<div class="jumbotron-wrapper">
+				<div class="row">
+					<div class="col-md-6">
+						 ILUSTRASI DI SINI
+					</div>
+					<div class="col-md-6">
+						<div class="jumbotron-text">
+							<h1>Coding Society</h1>
+							<h4>Your learning journey to become a great programmer</h4>
 
-    <!-- Testimonials -->
-    <section class="testimonials text-center bg-light">
-      <div class="container">
-        <h2 class="mb-5">What people are saying...</h2>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
-              <h5>Margaret E.</h5>
-              <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
-              <h5>Fred S.</h5>
-              <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
-              <h5>Sarah	W.</h5>
-              <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+							<div class="home-login-wrapper margin-lg-top">
+								<div class="row">
+									<div class="col-md-4">
+										<a href="https://www.codepolitan.com/users/facebook" class="btn btn-facebook btn-block margin-md-bottom record-data" data-action="connect-facebook" data-position="jumbotron"><i class="fa fa-facebook margin-sm-right"></i> Join with Facebook</a>
+									</div>
+									<div class="col-md-4">
+										<a href="https://www.codepolitan.com/users/github" class="btn btn-github btn-block margin-md-bottom record-data" data-action="connect-github" data-position="jumbotron"><i class="fa fa-github margin-sm-right"></i> Join with Github</a>
+									</div>
+									<div class="col-md-4">
+										<a href="https://www.codepolitan.com/how-to-start" class="btn btn-default btn-block margin-md-bottom record-data" data-action="how-to-start" data-position="jumbotron"><i class="fa fa-question-circle-o margin-sm-right"></i> How to start?</a>
+									</div>
+								</div>
+							</div>
 
-    <!-- Call to Action -->
-    <section class="call-to-action text-white text-center">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-          </div>
-          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <form>
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-                </div>
-                <div class="col-12 col-md-3">
-                  <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+							<p>Or <a href="https://www.codepolitan.com/users/register">Start with Email</a>. By starting, you agree to CodePolitan's Terms of Service and Privacy Policy.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	END: SECTION JUMBOTRON -->
 
-    <!-- Footer -->
-    <footer class="footer bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-            <ul class="list-inline mb-2">
-              <li class="list-inline-item">
-                <a href="#">About</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Contact</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
-              </li>
-            </ul>
-            <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2018. All Rights Reserved.</p>
-          </div>
-          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item mr-3">
-                <a href="#">
-                  <i class="fa fa-facebook fa-2x fa-fw"></i>
-                </a>
-              </li>
-              <li class="list-inline-item mr-3">
-                <a href="#">
-                  <i class="fa fa-twitter fa-2x fa-fw"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-instagram fa-2x fa-fw"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+	<!-- SECTION SEGMENT -->
+	<section class="home-segment">
+		<div class="container">
+			<div class="learning-level-wrapper">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="learning-segment segment-xs-border">
+							<h2>START LEARNING</h2>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="/static/vendor/jquery/jquery.min.js"></script>
-    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+							<p>Semua yang perlu kamu ketahui untuk memulai belajar pemrograman dan menjadi seorang programmer</p>
 
-  </body>
+							<div class="enter-button"><a href="https://www.codepolitan.com/start-learning" class="btn btn-cp record-data" data-action="start-learning" data-position="home-offering">MULAI SEKARANG <i class="fa fa-long-arrow-right"></i></a></div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="learning-segment">
+							<h2>INTENSIVE LEARNING</h2>
 
+							<p>Semua yang kamu butuhkan untuk meningkatkan skill pemrogramanmu agar menjadi great programmer</p>
+
+							<div class="enter-button"><a href="https://school.codepolitan.com/" class="btn btn-cp record-data" data-action="goto-developer-school" data-position="home-offering" target="_blank">MULAI SEKARANG <i class="fa fa-long-arrow-right"></i></a></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- END: SECTION SEGMENT -->
+
+
+	<!-- ARTICLE TAB -->
+	<nav class="nav-articles">
+		<div class="container">
+			<ul class="nav nav-tabs">
+				<li role="presentation" class="active"><a href="#article_featured" class="tab-article record-data" data-action="tab-featured-articles" data-position="home-articles">Artikel Pilihan</a></li>
+				<li role="presentation"><a href="#article_latest" class="tab-article record-data" data-action="tab-latest-articles" data-position="home-articles">Artikel Terbaru</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- END: ARTICLE TAB -->
+
+
+	<!-- SECTION HOME ARTICLES -->
+	<section class="home-articles">
+		<div class="container">
+
+			<!-- FEATURED ARTICLES -->
+			<div class="article-tab-content active" id="article_featured">
+				<div class="row">
+					<div class="col-md-6">
+						<h2 class="updates-title">ARTIKEL PILIHAN</h2>
+					</div>
+					<div class="col-md-3">
+						<div class="home-search">
+							<div class="search-box">
+								<form class="searchbox-input" id="searchbox_input" role="form" action="https://www.codepolitan.com" method="get">
+									<input type="text" class="form-control search-input" placeholder="Search" name="s" value="">
+									<button class="search-button"><span class="fa fa-search"></span></button>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="text-right">
+							<a href="https://www.codepolitan.com/articles" class="btn btn-default btn-block margin-lg-bottom record-data" data-action="other-articles" data-position="home-articles">Lihat Artikel Lainnya <i class="fa fa-long-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="content-loop">
+					<div class="row">
+
+
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" title="Apa yang Sebenarnya Dilakukan Incognito Mode " class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Apa yang Sebenarnya Dilakukan Incognito Mode ">
+											<img src="https://static.cdn-cdpl.com/270x135/d3cf87e0e00038b907551b1638c4a94a/Cover-Artikel(Incognito).jpg" class="thumb-img" alt="Apa yang Sebenarnya Dilakukan Incognito Mode ">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" title="Apa yang Sebenarnya Dilakukan Incognito Mode " class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Apa yang Sebenarnya Dilakukan Incognito Mode ">Apa yang Sebenarnya Dilakukan Incognito Mode </a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/Geeraldo">Geeraldo Jose</a></div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/mengenal-10-heuristic-usability-pada-user-interface-5b4481dc6d6d2" title="Mengenal 10 Heuristic Usability pada User Interface" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Mengenal 10 Heuristic Usability pada User Interface">
+											<img src="https://static.cdn-cdpl.com/270x135/2dd7d3ba70bcbe34f8b0d7242c773a78/10-heuristics1.png" class="thumb-img" alt="Mengenal 10 Heuristic Usability pada User Interface">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/mengenal-10-heuristic-usability-pada-user-interface-5b4481dc6d6d2" title="Mengenal 10 Heuristic Usability pada User Interface" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Mengenal 10 Heuristic Usability pada User Interface">Mengenal 10 Heuristic Usability pada User Interface</a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/budhiluhoer">Muhammad Budhiluhoer</a></div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/10-aplikasi-code-editor-untuk-ngoding-di-android-5b35c560965d2" title="10 Aplikasi Code Editor Untuk Ngoding di Android" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="10 Aplikasi Code Editor Untuk Ngoding di Android">
+											<img src="https://static.cdn-cdpl.com/270x135/998b78e349061b4971c0a2b0e8d6be41/Cover-Artikel(10-Apk-Ngoding-Android).jpg" class="thumb-img" alt="10 Aplikasi Code Editor Untuk Ngoding di Android">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/10-aplikasi-code-editor-untuk-ngoding-di-android-5b35c560965d2" title="10 Aplikasi Code Editor Untuk Ngoding di Android" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="10 Aplikasi Code Editor Untuk Ngoding di Android">10 Aplikasi Code Editor Untuk Ngoding di Android</a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/Geeraldo">Geeraldo Jose</a></div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/10-metode-array-pada-javascript-yang-wajib-kamu-ketahui-5b33a047b110a" title="10 Metode Array pada Javascript yang Wajib Kamu Ketahui" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="10 Metode Array pada Javascript yang Wajib Kamu Ketahui">
+											<img src="https://static.cdn-cdpl.com/270x135/5615bb41d81fad8fe992985aec0e5f29/js.jpg" class="thumb-img" alt="10 Metode Array pada Javascript yang Wajib Kamu Ketahui">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/tutorial">Tutorial</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/10-metode-array-pada-javascript-yang-wajib-kamu-ketahui-5b33a047b110a" title="10 Metode Array pada Javascript yang Wajib Kamu Ketahui" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="10 Metode Array pada Javascript yang Wajib Kamu Ketahui">10 Metode Array pada Javascript yang Wajib Kamu Ketahui</a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/istidana">Istidana Harjanti</a></div>
+									</div>
+								</div>
+							</div>
+
+							</div><div class="row">
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/microsoft-tenggelamkan-data-centre-untuk-sistem-pendinginan-yang-lebih-efisien-5b17854abe9d8" title="Microsoft Tenggelamkan Data Centre Untuk Sistem Pendinginan yang Lebih Efisien" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Microsoft Tenggelamkan Data Centre Untuk Sistem Pendinginan yang Lebih Efisien">
+											<img src="https://static.cdn-cdpl.com/270x135/8b81700471e8917196897fec5d8e28e9/_101886535_rory5.jpg" class="thumb-img" alt="Microsoft Tenggelamkan Data Centre Untuk Sistem Pendinginan yang Lebih Efisien">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/news">News</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/microsoft-tenggelamkan-data-centre-untuk-sistem-pendinginan-yang-lebih-efisien-5b17854abe9d8" title="Microsoft Tenggelamkan Data Centre Untuk Sistem Pendinginan yang Lebih Efisien" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Microsoft Tenggelamkan Data Centre Untuk Sistem Pendinginan yang Lebih Efisien">Microsoft Tenggelamkan Data Centre Untuk Sistem Pendinginan yang Lebih Efisien</a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/sukaturu">Takagi Fujimaru</a></div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/linux-vs-unix-apa-perbedaannya-5b044cba00f5c" title="Linux vs Unix: Apa Perbedaannya?" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Linux vs Unix: Apa Perbedaannya?">
+											<img src="https://static.cdn-cdpl.com/270x135/998b78e349061b4971c0a2b0e8d6be41/Cover-Artikel(Linux-VS-Unix).jpg" class="thumb-img" alt="Linux vs Unix: Apa Perbedaannya?">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/linux-vs-unix-apa-perbedaannya-5b044cba00f5c" title="Linux vs Unix: Apa Perbedaannya?" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Linux vs Unix: Apa Perbedaannya?">Linux vs Unix: Apa Perbedaannya?</a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/sukaturu">Takagi Fujimaru</a></div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/tips-memilih-tempat-hosting5ad6c3f6236a2" title="Tips Memilih Tempat Hosting" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Tips Memilih Tempat Hosting">
+											<img src="https://static.cdn-cdpl.com/270x135/998b78e349061b4971c0a2b0e8d6be41/Cover-Artikel(Tips-Tempat-Hosting).jpg" class="thumb-img" alt="Tips Memilih Tempat Hosting">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/tips-memilih-tempat-hosting5ad6c3f6236a2" title="Tips Memilih Tempat Hosting" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Tips Memilih Tempat Hosting">Tips Memilih Tempat Hosting</a></h3>
+										<div class="post-author official-author"><a href="http://www.codepolitan.com/coder/bagus">Lord Voldemort</a></div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/belajar-cara-membuat-game-2d-dengan-python-dan-arcade-5adff78d1db9b" title="Belajar Cara Membuat Game 2D dengan Python dan Arcade" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Belajar Cara Membuat Game 2D dengan Python dan Arcade">
+											<img src="https://static.cdn-cdpl.com/270x135/8b81700471e8917196897fec5d8e28e9/python-arcade-2d-game.png" class="thumb-img" alt="Belajar Cara Membuat Game 2D dengan Python dan Arcade">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/tutorial">Tutorial</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/belajar-cara-membuat-game-2d-dengan-python-dan-arcade-5adff78d1db9b" title="Belajar Cara Membuat Game 2D dengan Python dan Arcade" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Belajar Cara Membuat Game 2D dengan Python dan Arcade">Belajar Cara Membuat Game 2D dengan Python dan Arcade</a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/sukaturu">Takagi Fujimaru</a></div>
+									</div>
+								</div>
+							</div>
+
+
+					</div>
+				</div>
+			</div>
+			<!-- END: FEATURED ARTICLES -->
+
+			<!-- LATEST ARTICLES -->
+			<div class="article-tab-content" id="article_latest">
+				<div class="row">
+					<div class="col-md-6">
+						<h2 class="updates-title">ARTIKEL TERBARU</h2>
+					</div>
+					<div class="col-md-3">
+						<div class="home-search margin-lg-bottom">
+							<div class="search-box">
+								<form class="searchbox-input" id="searchbox_input" role="form" action="https://www.codepolitan.com" method="get">
+									<input type="text" class="form-control search-input" placeholder="Search" name="s" value="">
+									<button class="search-button"><span class="fa fa-search"></span></button>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="text-right">
+							<a href="https://www.codepolitan.com/articles" class="btn btn-default btn-block margin-lg-bottom record-data" data-action="other-articles" data-position="home-articles">Lihat Artikel Lainnya <i class="fa fa-long-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="content-loop">
+					<div class="row">
+
+
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/berbagai-jenis-pekerjaan-di-dunia-it-5b42f5e5cdf67" title="Berbagai Jenis Pekerjaan di Dunia IT " class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/berbagai-jenis-pekerjaan-di-dunia-it-5b42f5e5cdf67">
+											<img src="https://static.cdn-cdpl.com/270x135/998b78e349061b4971c0a2b0e8d6be41/Cover-Artiel(Berbagai-Jenis-Pekerjaan-IT).jpg" class="thumb-img" alt="Berbagai Jenis Pekerjaan di Dunia IT ">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/berbagai-jenis-pekerjaan-di-dunia-it-5b42f5e5cdf67" title="Berbagai Jenis Pekerjaan di Dunia IT " class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/berbagai-jenis-pekerjaan-di-dunia-it-5b42f5e5cdf67">Berbagai Jenis Pekerjaan di Dunia IT </a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/Geeraldo">Geeraldo Jose</a></div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/membuat-prototype-mobile-app-dengan-adobe-xd-5b7256f52bf8e" title="Membuat Prototype Mobile App dengan Adobe XD" class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/membuat-prototype-mobile-app-dengan-adobe-xd-5b7256f52bf8e">
+											<img src="https://static.cdn-cdpl.com/270x135/998b78e349061b4971c0a2b0e8d6be41/maxresdefault1.jpg" class="thumb-img" alt="Membuat Prototype Mobile App dengan Adobe XD">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/tutorial">Tutorial</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/membuat-prototype-mobile-app-dengan-adobe-xd-5b7256f52bf8e" title="Membuat Prototype Mobile App dengan Adobe XD" class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/membuat-prototype-mobile-app-dengan-adobe-xd-5b7256f52bf8e">Membuat Prototype Mobile App dengan Adobe XD</a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/budhiluhoer">Muhammad Budhiluhoer</a></div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" title="Apa yang Sebenarnya Dilakukan Incognito Mode " class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96">
+											<img src="https://static.cdn-cdpl.com/270x135/d3cf87e0e00038b907551b1638c4a94a/Cover-Artikel(Incognito).jpg" class="thumb-img" alt="Apa yang Sebenarnya Dilakukan Incognito Mode ">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" title="Apa yang Sebenarnya Dilakukan Incognito Mode " class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96">Apa yang Sebenarnya Dilakukan Incognito Mode </a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/Geeraldo">Geeraldo Jose</a></div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/remote-raspberry-pi-ssh-amp-localhost-tanpa-ip-static-menggunakan-dataplicity-5b6db9567f17f" title="Remote Raspberry Pi (SSH  dan Localhost) Tanpa IP Static Menggunakan Dataplicity" class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/remote-raspberry-pi-ssh-amp-localhost-tanpa-ip-static-menggunakan-dataplicity-5b6db9567f17f">
+											<img src="https://static.cdn-cdpl.com/270x135/5887376ce62fce6d8c58ce4ab55f2d70/dataplicity.jpg" class="thumb-img" alt="Remote Raspberry Pi (SSH  dan Localhost) Tanpa IP Static Menggunakan Dataplicity">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/tutorial">Tutorial</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/remote-raspberry-pi-ssh-amp-localhost-tanpa-ip-static-menggunakan-dataplicity-5b6db9567f17f" title="Remote Raspberry Pi (SSH  dan Localhost) Tanpa IP Static Menggunakan Dataplicity" class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/remote-raspberry-pi-ssh-amp-localhost-tanpa-ip-static-menggunakan-dataplicity-5b6db9567f17f">Remote Raspberry Pi (SSH  dan Localhost) Tanpa IP Static Menggunakan Dataplicity</a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/indirwanadi">Indirwan Adi</a></div>
+									</div>
+								</div>
+							</div>
+
+							</div><div class="row">
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/google-berkomitmen-mencetak-2000-developer-mobile-dan-web-dengan-google-developers-kejar-2018-5b6abd9e14dbc" title="Google Berkomitmen Mencetak 2.000 Developer Mobile dan Web dengan Google Developers Kejar 2018" class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/google-berkomitmen-mencetak-2000-developer-mobile-dan-web-dengan-google-developers-kejar-2018-5b6abd9e14dbc">
+											<img src="https://static.cdn-cdpl.com/270x135/2b9f4ed2c46d42f883ab3439e02cd503/700x350.png" class="thumb-img" alt="Google Berkomitmen Mencetak 2.000 Developer Mobile dan Web dengan Google Developers Kejar 2018">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/news">News</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/google-berkomitmen-mencetak-2000-developer-mobile-dan-web-dengan-google-developers-kejar-2018-5b6abd9e14dbc" title="Google Berkomitmen Mencetak 2.000 Developer Mobile dan Web dengan Google Developers Kejar 2018" class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/google-berkomitmen-mencetak-2000-developer-mobile-dan-web-dengan-google-developers-kejar-2018-5b6abd9e14dbc">Google Berkomitmen Mencetak 2.000 Developer Mobile dan Web dengan Google Developers Kejar 2018</a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/dicoding">Dicoding Indonesia</a></div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/membangun-aplikasi-android-dengan-python-kivy-5b61d26882da1" title="Membangun Aplikasi Android dengan Python Kivy" class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/membangun-aplikasi-android-dengan-python-kivy-5b61d26882da1">
+											<img src="https://static.cdn-cdpl.com/270x135/998b78e349061b4971c0a2b0e8d6be41/Cover-Artikel-membangun-aplikasi-android-dengan-python-kivy.jpg" class="thumb-img" alt="Membangun Aplikasi Android dengan Python Kivy">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/tutorial">Tutorial</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/membangun-aplikasi-android-dengan-python-kivy-5b61d26882da1" title="Membangun Aplikasi Android dengan Python Kivy" class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/membangun-aplikasi-android-dengan-python-kivy-5b61d26882da1">Membangun Aplikasi Android dengan Python Kivy</a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/jamesboon">Kzulfazriawan</a></div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/mengenal-microinteraction-buat-uiux-berbicara-padamu-5b5ff280ae7dc" title="Mengenal Microinteraction, Buat UI/UX Berbicara Padamu" class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/mengenal-microinteraction-buat-uiux-berbicara-padamu-5b5ff280ae7dc">
+											<img src="https://static.cdn-cdpl.com/270x135/904bb29293b23953d7cc1afcd7a1fccf/microinteraction.jpg" class="thumb-img" alt="Mengenal Microinteraction, Buat UI/UX Berbicara Padamu">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/mengenal-microinteraction-buat-uiux-berbicara-padamu-5b5ff280ae7dc" title="Mengenal Microinteraction, Buat UI/UX Berbicara Padamu" class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/mengenal-microinteraction-buat-uiux-berbicara-padamu-5b5ff280ae7dc">Mengenal Microinteraction, Buat UI/UX Berbicara Padamu</a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/arighi">arighi</a></div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-3">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="https://www.codepolitan.com/membuat-ui-website-modern-dengan-svg-5b5980354860b" title="Membuat UI Website Modern dengan SVG" class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/membuat-ui-website-modern-dengan-svg-5b5980354860b">
+											<img src="https://static.cdn-cdpl.com/270x135/2dd7d3ba70bcbe34f8b0d7242c773a78/1.png" class="thumb-img" alt="Membuat UI Website Modern dengan SVG">
+										</a>
+									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="https://www.codepolitan.com/category/tutorial">Tutorial</a></div>
+										<h3 class="post-title"><a href="https://www.codepolitan.com/membuat-ui-website-modern-dengan-svg-5b5980354860b" title="Membuat UI Website Modern dengan SVG" class="record-data" data-action="latest-articles-item" data-position="home-articles" data-id="https://www.codepolitan.com/membuat-ui-website-modern-dengan-svg-5b5980354860b">Membuat UI Website Modern dengan SVG</a></h3>
+										<div class="post-author "><a href="http://www.codepolitan.com/coder/budhiluhoer">Muhammad Budhiluhoer</a></div>
+									</div>
+								</div>
+							</div>
+
+
+					</div>
+				</div>
+			</div>
+			<!-- END: LATEST ARTICLES -->
+
+			<!--<div>
+				<a href="https://www.codepolitan.com/course"><img src="https://www.codepolitan.com/assets/img/home-course.jpg" class="full-width" alt="CodePolitan Offline Course"></a>
+			</div>-->
+
+		</div>
+	</section>
+	<!-- END: SECTION HOME ARTICLES -->
+
+
+	<!-- SECTION SUBMIT -->
+	<section class="home-submit">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="home-submit-left margin-md-bottom">
+						<p>Bagi pengetahuanmu untuk bersama membangun komunitas developer di Indonesia! Kita bisa jika semua terlibat dan saling memberi manfaat.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="home-submit-right">
+
+							<a href="https://www.codepolitan.com/users/login?callback=https://www.codepolitan.com/dashboard/post/add" class="btn btn-cp btn-xl btn-block record-data" data-action="submit-article" data-position="home-articles"><i class="fa fa-pencil-square margin-xs-right"></i> Tulis Artikel Sekarang!</a>
+											</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END: SECTION SUBMIT -->
+
+
+	<!-- SECTION INTERACTIVE CODING -->
+	<section class="home-learning">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="home-learning-content">
+
+						<div class="row">
+							<div class="col-md-11">
+
+								<!-- LEARNING SEGMENT -->
+								<div class="learning-segment segment-margin-bottom">
+									<h2>LEARN CODING</h2>
+
+									<p class="desc-text">Belajar pemrograman lebih mudah, fitur ini memungkinkan kamu belajar coding sambil praktek di satu tempat yang sama. <a href="https://www.codepolitan.com/interactive-coding" class="record-data" data-action="other-interactive-coding" data-position="home-interactive-coding">Lihat materi lainnya</a></p>
+
+
+									<div class="learn-loop no-margin-bottom">
+										<div class="row">
+
+												<div class="col-md-4">
+													<div class="post-item post-only-border">
+														<div class="post-thumb">
+															<a href="https://www.codepolitan.com/interactive-coding/c" title="C" class="record-data" data-action="interactive-coding-item" data-position="home-interactive-coding" data-id="https://www.codepolitan.com/interactive-coding/c">
+																<img src="https://static.cdn-cdpl.com/source/00600bfb26f44c7427a680235c2e3042/c-lang.png" class="thumb-img" alt="">
+															</a>
+														</div>
+														<div class="post-body">
+															<div class="post-category"><a href="https://www.codepolitan.com/interactive-coding">Interactive Coding</a></div>
+															<h3 class="post-title"><a href="https://www.codepolitan.com/interactive-coding/c" class="record-data" data-action="interactive-coding-item" data-position="home-interactive-coding" data-id="https://www.codepolitan.com/interactive-coding/c">C</a></h3>
+															<div class="post-val">Min 200 VAL</div>
+															<div class="post-button"><a href="https://www.codepolitan.com/interactive-coding/c" class="btn btn-default">Mulai Belajar</a></div>
+														</div>
+													</div>
+												</div>
+
+
+												<div class="col-md-4">
+													<div class="post-item post-only-border">
+														<div class="post-thumb">
+															<a href="https://www.codepolitan.com/interactive-coding/python" title="Python" class="record-data" data-action="interactive-coding-item" data-position="home-interactive-coding" data-id="https://www.codepolitan.com/interactive-coding/python">
+																<img src="https://static.cdn-cdpl.com/source/b8e29e8f0b15aab3473fed5df06c9186/cover_python_tutorialset.png" class="thumb-img" alt="">
+															</a>
+														</div>
+														<div class="post-body">
+															<div class="post-category"><a href="https://www.codepolitan.com/interactive-coding">Interactive Coding</a></div>
+															<h3 class="post-title"><a href="https://www.codepolitan.com/interactive-coding/python" class="record-data" data-action="interactive-coding-item" data-position="home-interactive-coding" data-id="https://www.codepolitan.com/interactive-coding/python">Python</a></h3>
+															<div class="post-val">Min 200 VAL</div>
+															<div class="post-button"><a href="https://www.codepolitan.com/interactive-coding/python" class="btn btn-default">Mulai Belajar</a></div>
+														</div>
+													</div>
+												</div>
+
+
+												<div class="col-md-4">
+													<div class="post-item post-only-border">
+														<div class="post-thumb">
+															<a href="https://www.codepolitan.com/interactive-coding/java" title="Java" class="record-data" data-action="interactive-coding-item" data-position="home-interactive-coding" data-id="https://www.codepolitan.com/interactive-coding/java">
+																<img src="https://static.cdn-cdpl.com/source/b8e29e8f0b15aab3473fed5df06c9186/java_logo_big_1.jpg" class="thumb-img" alt="">
+															</a>
+														</div>
+														<div class="post-body">
+															<div class="post-category"><a href="https://www.codepolitan.com/interactive-coding">Interactive Coding</a></div>
+															<h3 class="post-title"><a href="https://www.codepolitan.com/interactive-coding/java" class="record-data" data-action="interactive-coding-item" data-position="home-interactive-coding" data-id="https://www.codepolitan.com/interactive-coding/java">Java</a></h3>
+															<div class="post-val">Min 200 VAL</div>
+															<div class="post-button"><a href="https://www.codepolitan.com/interactive-coding/java" class="btn btn-default">Mulai Belajar</a></div>
+														</div>
+													</div>
+												</div>
+
+												</div><div class="row">
+												<div class="col-md-4">
+													<div class="post-item post-only-border">
+														<div class="post-thumb">
+															<a href="https://www.codepolitan.com/interactive-coding/javascript" title="JavaScript" class="record-data" data-action="interactive-coding-item" data-position="home-interactive-coding" data-id="https://www.codepolitan.com/interactive-coding/javascript">
+																<img src="https://static.cdn-cdpl.com/source/abf992b0d0f0a1b46b22e7eb4de4d901/assets/logo-js.png" class="thumb-img" alt="">
+															</a>
+														</div>
+														<div class="post-body">
+															<div class="post-category"><a href="https://www.codepolitan.com/interactive-coding">Interactive Coding</a></div>
+															<h3 class="post-title"><a href="https://www.codepolitan.com/interactive-coding/javascript" class="record-data" data-action="interactive-coding-item" data-position="home-interactive-coding" data-id="https://www.codepolitan.com/interactive-coding/javascript">JavaScript</a></h3>
+															<div class="post-val">Min 0 VAL</div>
+															<div class="post-button"><a href="https://www.codepolitan.com/interactive-coding/javascript" class="btn btn-default">Mulai Belajar</a></div>
+														</div>
+													</div>
+												</div>
+
+
+												<div class="col-md-4">
+													<div class="post-item post-only-border">
+														<div class="post-thumb">
+															<a href="https://www.codepolitan.com/interactive-coding/php" title="PHP" class="record-data" data-action="interactive-coding-item" data-position="home-interactive-coding" data-id="https://www.codepolitan.com/interactive-coding/php">
+																<img src="https://static.cdn-cdpl.com/source/b8e29e8f0b15aab3473fed5df06c9186/php_logo_big.jpg" class="thumb-img" alt="">
+															</a>
+														</div>
+														<div class="post-body">
+															<div class="post-category"><a href="https://www.codepolitan.com/interactive-coding">Interactive Coding</a></div>
+															<h3 class="post-title"><a href="https://www.codepolitan.com/interactive-coding/php" class="record-data" data-action="interactive-coding-item" data-position="home-interactive-coding" data-id="https://www.codepolitan.com/interactive-coding/php">PHP</a></h3>
+															<div class="post-val">Min 0 VAL</div>
+															<div class="post-button"><a href="https://www.codepolitan.com/interactive-coding/php" class="btn btn-default">Mulai Belajar</a></div>
+														</div>
+													</div>
+												</div>
+
+
+												<div class="col-md-4">
+													<div class="post-item post-only-border">
+														<div class="post-thumb">
+															<a href="https://www.codepolitan.com/interactive-coding/html" title="HTML" class="record-data" data-action="interactive-coding-item" data-position="home-interactive-coding" data-id="https://www.codepolitan.com/interactive-coding/html">
+																<img src="https://static.cdn-cdpl.com/source/b8e29e8f0b15aab3473fed5df06c9186/html5_logo_big.jpg" class="thumb-img" alt="">
+															</a>
+														</div>
+														<div class="post-body">
+															<div class="post-category"><a href="https://www.codepolitan.com/interactive-coding">Interactive Coding</a></div>
+															<h3 class="post-title"><a href="https://www.codepolitan.com/interactive-coding/html" class="record-data" data-action="interactive-coding-item" data-position="home-interactive-coding" data-id="https://www.codepolitan.com/interactive-coding/html">HTML</a></h3>
+															<div class="post-val">Min 0 VAL</div>
+															<div class="post-button"><a href="https://www.codepolitan.com/interactive-coding/html" class="btn btn-default">Mulai Belajar</a></div>
+														</div>
+													</div>
+												</div>
+
+																						</div>
+									</div>
+								</div>
+								<!-- END: LEARNING SEGMENT -->
+
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="home-sidebar sidebar-event">
+						<h3><i class="fa fa-calendar margin-xs-right"></i> UPCOMING TECH EVENT</h3>
+
+						<div class="event-loop">
+
+															<ul>
+																			<li class="event-item">
+											<div class="event-title"><a href="https://www.codepolitan.com/event/dewatalks-2018-web-app-security-5b6d4a83db2b8" class="record-data" data-action="event-item" data-position="home-event" data-id="https://www.codepolitan.com/event/dewatalks-2018-web-app-security-5b6d4a83db2b8">Dewatalks 2018: Web App Security</a></div>
+											<div class="event-company"><span class="fa fa-calendar fa-fw"></span> Sep 6, 2018</div>
+											<div class="event-location"><span class="fa fa-map-marker fa-fw"></span> Jakarta <a href="https://www.codepolitan.com/event/dewatalks-2018-web-app-security-5b6d4a83db2b8" class="record-data" data-action="event-item" data-position="home-event" data-id="https://www.codepolitan.com/event/dewatalks-2018-web-app-security-5b6d4a83db2b8">Lihat Detail</a></div>
+										</li>
+																				<li class="event-item">
+											<div class="event-title"><a href="https://www.codepolitan.com/event/binus-job-expo-5b6aa06085ff7" class="record-data" data-action="event-item" data-position="home-event" data-id="https://www.codepolitan.com/event/binus-job-expo-5b6aa06085ff7">BINUS JOB EXPO</a></div>
+											<div class="event-company"><span class="fa fa-calendar fa-fw"></span> Sep 7, 2018</div>
+											<div class="event-location"><span class="fa fa-map-marker fa-fw"></span> Jakarta <a href="https://www.codepolitan.com/event/binus-job-expo-5b6aa06085ff7" class="record-data" data-action="event-item" data-position="home-event" data-id="https://www.codepolitan.com/event/binus-job-expo-5b6aa06085ff7">Lihat Detail</a></div>
+										</li>
+																				<li class="event-item">
+											<div class="event-title"><a href="https://www.codepolitan.com/event/pnb-web-design-competition-pnbwdc-2018-5b6d5be7ab992" class="record-data" data-action="event-item" data-position="home-event" data-id="https://www.codepolitan.com/event/pnb-web-design-competition-pnbwdc-2018-5b6d5be7ab992">PNB Web Design Competition (PNBWDC) 2018</a></div>
+											<div class="event-company"><span class="fa fa-calendar fa-fw"></span> Sep 8, 2018</div>
+											<div class="event-location"><span class="fa fa-map-marker fa-fw"></span> Bali <a href="https://www.codepolitan.com/event/pnb-web-design-competition-pnbwdc-2018-5b6d5be7ab992" class="record-data" data-action="event-item" data-position="home-event" data-id="https://www.codepolitan.com/event/pnb-web-design-competition-pnbwdc-2018-5b6d5be7ab992">Lihat Detail</a></div>
+										</li>
+																		</ul>
+
+							<div class="margin-lg-top">
+								<a href="https://www.codepolitan.com/event" class="btn btn-default record-data" data-action="other-event" data-position="home-event">Lihat Semua Event<i class="fa fa-long-arrow-right"></i></a>
+							</div>
+
+							<div class="margin-md-top">
+								<a href="https://www.codepolitan.com/publikasi-event" class="record-data" data-action="how-to-submit-event" data-position="home-event">Cara publikasi event di CodePolitan</a>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="home-sidebar no-margin-top sidebar-follow">
+						<h3>FOLLOW CODEPOLITAN</h3>
+
+						<div class="follow-area">
+							<p>Tetap terhubung bersama CodePolitan melalui akun sosial mediamu</p>
+
+							<div class="follow-icon">
+								<a href="https://www.facebook.com/codepolitan/" class="follow-facebook record-data" data-action="follow-facebook" data-position="home-social-media" target="_blank"><span class="fa fa-facebook-official"></span></a>
+								<a href="https://twitter.com/codepolitan" class="follow-twitter record-data" data-action="follow-twitter" data-position="home-social-media" target="_blank"><span class="fa fa-twitter"></span></a>
+								<a href="https://plus.google.com/+Codepolitan" class="follow-google-plus record-data" data-action="follow-google-plus" data-position="home-social-media" target="_blank"><span class="fa fa-google-plus"></span></a>
+								<a href="https://www.youtube.com/channel/UCf9YmYfSG0d_vxxZDMJfElA" class="follow-youtube record-data" data-action="follow-youtube" data-position="home-social-media" target="_blank"><span class="fa fa-youtube-play"></span></a>
+								<a href="https://www.linkedin.com/company/codepolitan" class="follow-linkedin record-data" data-action="follow-linkedin" data-position="home-social-media" target="_blank"><span class="fa fa-linkedin-square"></span></a>
+								<a href="https://www.instagram.com/codepolitan/" class="follow-instagram record-data" data-action="follow-instagram" data-position="home-social-media" target="_blank"><span class="fa fa-instagram"></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END: SECTION INTERACTIVE CODING -->
+
+
+
+
+
+</div>
+<!-- END: MAIN WRAPPER -->
+
+<!-- FOOTER -->
+	<footer class="cp-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="footer-copyright">
+						Copyright &copy; 2018 <a href="https://www.codepolitan.com">CodePolitan</a>. All rights reserved.
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="footer-menu">
+						<ul>
+							<li><a href="https://www.codepolitan.com/about" class="record-data" data-action="view-about" data-position="general-footer">About</a></li>
+							<li><a href="https://www.codepolitan.com/how-to-start" class="record-data" data-action="view-term" data-position="general-footer">Term & Condition</a></li>
+							<!--<li><a href="https://www.codepolitan.com/publikasi-event" class="record-data" data-action="view-media-partner" data-position="general-footer">Media Partner</a></li>-->
+							<li><a href="https://www.codepolitan.com/contact" class="record-data" data-action="view-contact" data-position="general-footer">Contact Us</a></li>
+							<li><a href="https://www.codepolitan.com/statistics" class="record-data" data-action="view-stat" data-position="general-footer">Stat</a></li>
+							<li><a href="https://www.codepolitan.com/credit-to-bug-reporter" target="_blank" class="record-data" data-action="go-credit" data-position="general-footer">Credit</a></li>
+							<li><a href="http://www.produktif.net/" target="_blank" class="record-data" data-action="go-produktif" data-position="general-footer">Store</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- END: FOOTER -->
+
+	<!-- Bridge -->
+	<input type="hidden" id="base_url" value="https://www.codepolitan.com">
+
+    <!-- Dependency -->
+	<script src="/static/vendor/jquery/jquery-3.1.0.min.js"></script>
+	<script src="/static/vendor/jquery/jquery-migrate-1.4.1.min.js"></script>
+	<script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/static/js/mainscript.js"></script>
+	<script src="/static/js/cp_counter.js"></script>
+
+
+</body>
 </html>
