@@ -1,0 +1,13 @@
+#showall-toggle {}
+.showall .tab-pane {
+	display: block !important;
+}
+.showall #step-pagination {
+	display: none;
+}
+#step-pagination {
+	margin-top: 40px;
+	padding: 5px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
