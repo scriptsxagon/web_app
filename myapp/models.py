@@ -33,11 +33,11 @@ class Isiforum(models.Model):
         return '[%s] %s' % (self.code, self.name)
 
 class Subisi(models.Model):
-    forum = models.ForeignKey(Isiforum, on_delete=models.CASCADE)
+    isiforum = models.ForeignKey(Isiforum, on_delete=models.CASCADE)
     order = models.IntegerField()
     name = models.CharField(max_length=70)
     # summary = RichTextUploadingField()
     konten = RichTextUploadingField()
 
     def  __str__(self):
-        return '%s - %d. %s' % (self.forum, self.order, self.name)
+        return '%s - %d. %s' % (self.isiforum, self.order, self.name)

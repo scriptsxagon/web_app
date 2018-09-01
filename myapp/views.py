@@ -73,13 +73,13 @@ def course(request, id, lesson_id):
 def isiforum(request, id, subisi_id):
     subisi = Subisi.objects.filter(isiforum__id=id).order_by('order')
     isiforum = Isiforum.objects.filter(id=id)[0]
-    subisi_aktif = int(Subisi_id)
+    subisi_aktif = int(subisi_id)
     if subisi_id == '0':
         content = isiforum.summary
     else:
-        data = subisi.objects.filter(id=lesson_id).order_by('order')[0]
+        data = Subisi.objects.filter(id=subisi_id).order_by('order')[0]
         content = data.konten
-    return render(request, 'lesson.html', {'subisi': subisi,
+    return render(request, 'subisi.html', {'subisi': subisi,
                                            'isiforum': isiforum,
                                            'content': content,
                                            'subisi_aktif': subisi_aktif}

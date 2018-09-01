@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <header class="masthead">
+      <section class="portfolio" id="portfolio">
+          <div class="position-absolute" style="width: 20%; margin-left: 1%; ">
+            <a class="list-group-item list-group-item-action {% if subisi_aktif == 0 %} active {% endif %}" href="/isiforum/{{isiforum.id}}/0/">{{ isiforum.name }}</a>
+            {% for subisi in subisi %}
+            <a class="list-group-item list-group-item-action {% if subisi_aktif == subisi.id %} active {% endif %}" href="/course/{{isiforum.id}}/{{subisi.id}}/">{{ subisi.name }}</a>
+            {% endfor %}
+          </div>
+
+          <div class="row text-white" style="margin-left: 25%; margin-top: 0; margin-right: 10%; text-align: justify;">
+                <p>
+                    {{ content|safe }}
+                </p>
+          </div>
+      </section>
+    </header>
+{% endblock %}
