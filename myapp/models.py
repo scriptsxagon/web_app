@@ -5,8 +5,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Course(models.Model):
     code = models.CharField(max_length=10)
     name = models.CharField(max_length=70)
-    summary = RichTextUploadingField()
-    order = models.IntegerField()
+    model_pic = models.ImageField(upload_to='img/course')
 
 
     def  __str__(self):
@@ -16,8 +15,8 @@ class Lesson(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     order = models.IntegerField()
     name = models.CharField(max_length=70)
-    # summary = RichTextUploadingField()
     konten = RichTextUploadingField()
+    model_pic = models.ImageField(upload_to='img/lesson')
 
     def  __str__(self):
         return '%s - %d. %s' % (self.course, self.order, self.name)
