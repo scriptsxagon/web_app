@@ -343,17 +343,19 @@ ul.nav.navbar-nav{margin-left:20px}
 
 .sidebar-follow .follow-area .follow-icon a{margin-right:10px}
 
-.sidebar-follow .follow-area .follow-icon a.follow-facebook:hover{color:#3B5998}
 
-.sidebar-follow .follow-area .follow-icon a.follow-twitter:hover{color:#1EA0F0}
 
-.sidebar-follow .follow-area .follow-icon a.follow-google-plus:hover{color:#DC4E41}
+.sidebar-follow .follow-area .follow-icon a.follow-facebook{color:#3B5998}
 
-.sidebar-follow .follow-area .follow-icon a.follow-youtube:hover{color:#DD473A}
+.sidebar-follow .follow-area .follow-icon a.follow-twitter{color:#1EA0F0}
 
-.sidebar-follow .follow-area .follow-icon a.follow-linkedin:hover{color:#607D8B}
+.sidebar-follow .follow-area .follow-icon a.follow-google-plus{color:#DC4E41}
 
-.sidebar-follow .follow-area .follow-icon a.follow-instagram:hover{color:#000}
+.sidebar-follow .follow-area .follow-icon a.follow-youtube{color:#DD473A}
+
+.sidebar-follow .follow-area .follow-icon a.follow-linkedin{color:#007bb6}
+
+.sidebar-follow .follow-area .follow-icon a.follow-instagram{color:#bc2a8d}
 
 .sidebar-popular-post{background:#fff;border:1px solid #e9e9e9;margin-bottom:40px}
 
