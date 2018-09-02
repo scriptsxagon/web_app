@@ -1,50 +1,448 @@
 {% extends 'base.html' %}
 {% block content %}
-<header class="masthead">
-  <section class="portfolio mb-3" id="portfolio">
-       <div class="container text-center">
-    <h2 class="mb-4 text-white">CARILAH ILMU SEBANYAK BANYAKNYA.</h2>
-    </div>
-      <div class="container">
-                <div class="row">
+	<!-- MAIN WRAPPER -->
+	<div class="cp-wrapper margin-top-no-padding-wrapper">
 
-                {% for course in courses %}
-                <div class="card mr-2" style="width: 17.2rem;">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>{{ course.name | truncatewords:"3"}}</b></h5>
-                        <p class="card-text"> {{ course.summary | safe | truncatewords:"10"|linebreaks }}</p>
-                    </div>
-                    <a href="/course/{{ course.id }}/0/" class="btn" style="width: 35%; align-item: center;">Mulai</a>
-                </div>
-                {% endfor %}
-                </div>
-      </div>
+		<!-- SECTION JUMBOTRON -->
+		<section class="cp-jumbotron jumbotron-article">
+			<div class="container">
+				<h1>Berbagi Pengetahuan</h1>
+				<p>Saling berbagi pengetahuan seputar pemrograman dan teknologi. Kita bisa jika semua terlibat dan saling memberi manfaat.<br /><a href="https://www.codepolitan.com/panduan-penulisan-artikel" class="record-data" data-action="how-to-submit-article" data-position="jumbotron" target="_blank">Baca panduan penulisan artikel</a>.</p>
 
-      {% if courses.has_other_pages %}
-        <nav aria-label="Page navigation example" style="padding-top:22px;">
-          <ul class="pagination justify-content-center">
-            {% if courses.has_previous %}
-              <li class="page-item"><a href="?page={{ courses.previous_page_number }}" class="page-link">&laquo;</a></li>
-            {% else %}
-              <li class="disabled"><span class="page-link">&laquo;</span></li>
-            {% endif %}
+				                    <div class="margin-lg-top"><a href="https://www.codepolitan.com/dashboard/article/add/post" class="btn btn-border btn-lg record-data" data-action="submit-article" data-position="jumbotron"><i class="fa fa-pencil-square margin-xs-right"></i> Posting Article</a></div>
 
-            {% for i in courses.paginator.page_range %}
-              {% if courses.number == i %}
-                <li class="page-item active"><span class="page-link">{{ i }} <span class="sr-only">(current)</span></span></li>
-              {% else %}
-                <li class="page-item"><a href="?page={{ i }}" class="page-link">{{ i }}</a></li>
-              {% endif %}
-            {% endfor %}
+			</div>
+		</section>
+		<!-- END: SECTION JUMBOTRON -->
 
-            {% if courses.has_next %}
-              <li class="page-item"><a href="?page={{ courses.next_page_number }}" class="page-link">&raquo;</a></li>
-            {% else %}
-              <li class="disabled"><span class="page-link">&raquo;</span></li>
-            {% endif %}
-          </ul>
-        </nav>
-        {% endif %}
-  </section>
-</header>
+		<!-- SEARCH WRAPPER -->
+		<div class="search-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="search-box">
+							<form class="searchbox-input" id="searchbox_input" role="form" action="https://www.codepolitan.com" method="get">
+								<input type="text" class="form-control search-input" placeholder="Search" name="s" value="">
+								<button class="search-button"><span class="fa fa-search"></span></button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END: SEARCH WRAPPER -->
+
+		<!-- SECTION UPDATES -->
+		<section class="updates-wrapper">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-md-9">
+
+						<!-- CONTENT LOOP -->
+						<div class="content-loop">
+							<div class="row">
+
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/berbagai-jenis-pekerjaan-di-dunia-it-5b42f5e5cdf67" title="Berbagai Jenis Pekerjaan di Dunia IT ">
+													<img src="https://static.cdn-cdpl.com/340x195/998b78e349061b4971c0a2b0e8d6be41/Cover-Artiel(Berbagai-Jenis-Pekerjaan-IT).jpg" class="thumb-img" alt="Berbagai Jenis Pekerjaan di Dunia IT ">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/berbagai-jenis-pekerjaan-di-dunia-it-5b42f5e5cdf67" title="Berbagai Jenis Pekerjaan di Dunia IT ">Berbagai Jenis Pekerjaan di Dunia IT </a></h3>
+												<div class="post-author "><a href="https://www.codepolitan.com/coder/Geeraldo">Geeraldo Jose</a></div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/membuat-prototype-mobile-app-dengan-adobe-xd-5b7256f52bf8e" title="Membuat Prototype Mobile App dengan Adobe XD">
+													<img src="https://static.cdn-cdpl.com/340x195/998b78e349061b4971c0a2b0e8d6be41/maxresdefault1.jpg" class="thumb-img" alt="Membuat Prototype Mobile App dengan Adobe XD">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/tutorial">Tutorial</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/membuat-prototype-mobile-app-dengan-adobe-xd-5b7256f52bf8e" title="Membuat Prototype Mobile App dengan Adobe XD">Membuat Prototype Mobile App dengan Adobe XD</a></h3>
+												<div class="post-author "><a href="https://www.codepolitan.com/coder/budhiluhoer">Muhammad Budhiluhoer</a></div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" title="Apa yang Sebenarnya Dilakukan Incognito Mode ">
+													<img src="https://static.cdn-cdpl.com/340x195/d3cf87e0e00038b907551b1638c4a94a/Cover-Artikel(Incognito).jpg" class="thumb-img" alt="Apa yang Sebenarnya Dilakukan Incognito Mode ">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" title="Apa yang Sebenarnya Dilakukan Incognito Mode ">Apa yang Sebenarnya Dilakukan Incognito Mode </a></h3>
+												<div class="post-author "><a href="https://www.codepolitan.com/coder/Geeraldo">Geeraldo Jose</a></div>
+											</div>
+										</div>
+									</div>
+
+									</div><div class="row">
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/remote-raspberry-pi-ssh-amp-localhost-tanpa-ip-static-menggunakan-dataplicity-5b6db9567f17f" title="Remote Raspberry Pi (SSH  dan Localhost) Tanpa IP Static Menggunakan Dataplicity">
+													<img src="https://static.cdn-cdpl.com/340x195/5887376ce62fce6d8c58ce4ab55f2d70/dataplicity.jpg" class="thumb-img" alt="Remote Raspberry Pi (SSH  dan Localhost) Tanpa IP Static Menggunakan Dataplicity">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/tutorial">Tutorial</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/remote-raspberry-pi-ssh-amp-localhost-tanpa-ip-static-menggunakan-dataplicity-5b6db9567f17f" title="Remote Raspberry Pi (SSH  dan Localhost) Tanpa IP Static Menggunakan Dataplicity">Remote Raspberry Pi (SSH  dan Localhost) Tanpa IP Static Menggunakan Dataplicity</a></h3>
+												<div class="post-author "><a href="https://www.codepolitan.com/coder/indirwanadi">Indirwan Adi</a></div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/google-berkomitmen-mencetak-2000-developer-mobile-dan-web-dengan-google-developers-kejar-2018-5b6abd9e14dbc" title="Google Berkomitmen Mencetak 2.000 Developer Mobile dan Web dengan Google Developers Kejar 2018">
+													<img src="https://static.cdn-cdpl.com/340x195/2b9f4ed2c46d42f883ab3439e02cd503/700x350.png" class="thumb-img" alt="Google Berkomitmen Mencetak 2.000 Developer Mobile dan Web dengan Google Developers Kejar 2018">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/news">News</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/google-berkomitmen-mencetak-2000-developer-mobile-dan-web-dengan-google-developers-kejar-2018-5b6abd9e14dbc" title="Google Berkomitmen Mencetak 2.000 Developer Mobile dan Web dengan Google Developers Kejar 2018">Google Berkomitmen Mencetak 2.000 Developer Mobile dan Web dengan Google Developers Kejar 2018</a></h3>
+												<div class="post-author "><a href="https://www.codepolitan.com/coder/dicoding">Dicoding Indonesia</a></div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/membangun-aplikasi-android-dengan-python-kivy-5b61d26882da1" title="Membangun Aplikasi Android dengan Python Kivy">
+													<img src="https://static.cdn-cdpl.com/340x195/998b78e349061b4971c0a2b0e8d6be41/Cover-Artikel-membangun-aplikasi-android-dengan-python-kivy.jpg" class="thumb-img" alt="Membangun Aplikasi Android dengan Python Kivy">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/tutorial">Tutorial</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/membangun-aplikasi-android-dengan-python-kivy-5b61d26882da1" title="Membangun Aplikasi Android dengan Python Kivy">Membangun Aplikasi Android dengan Python Kivy</a></h3>
+												<div class="post-author "><a href="https://www.codepolitan.com/coder/jamesboon">Kzulfazriawan</a></div>
+											</div>
+										</div>
+									</div>
+
+									</div><div class="row">
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/mengenal-microinteraction-buat-uiux-berbicara-padamu-5b5ff280ae7dc" title="Mengenal Microinteraction, Buat UI/UX Berbicara Padamu">
+													<img src="https://static.cdn-cdpl.com/340x195/904bb29293b23953d7cc1afcd7a1fccf/microinteraction.jpg" class="thumb-img" alt="Mengenal Microinteraction, Buat UI/UX Berbicara Padamu">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/mengenal-microinteraction-buat-uiux-berbicara-padamu-5b5ff280ae7dc" title="Mengenal Microinteraction, Buat UI/UX Berbicara Padamu">Mengenal Microinteraction, Buat UI/UX Berbicara Padamu</a></h3>
+												<div class="post-author "><a href="https://www.codepolitan.com/coder/arighi">arighi</a></div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/membuat-ui-website-modern-dengan-svg-5b5980354860b" title="Membuat UI Website Modern dengan SVG">
+													<img src="https://static.cdn-cdpl.com/340x195/2dd7d3ba70bcbe34f8b0d7242c773a78/1.png" class="thumb-img" alt="Membuat UI Website Modern dengan SVG">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/tutorial">Tutorial</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/membuat-ui-website-modern-dengan-svg-5b5980354860b" title="Membuat UI Website Modern dengan SVG">Membuat UI Website Modern dengan SVG</a></h3>
+												<div class="post-author "><a href="https://www.codepolitan.com/coder/budhiluhoer">Muhammad Budhiluhoer</a></div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/belajar-realm-database-aplikasi-crud-sederhana-5b4bfd466ec62" title="Belajar Realm Database Membuat Aplikasi CRUD Sederhana">
+													<img src="https://static.cdn-cdpl.com/340x195/998b78e349061b4971c0a2b0e8d6be41/mobileDB.PNG" class="thumb-img" alt="Belajar Realm Database Membuat Aplikasi CRUD Sederhana">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/tutorial">Tutorial</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/belajar-realm-database-aplikasi-crud-sederhana-5b4bfd466ec62" title="Belajar Realm Database Membuat Aplikasi CRUD Sederhana">Belajar Realm Database Membuat Aplikasi CRUD Sederhana</a></h3>
+												<div class="post-author "><a href="https://www.codepolitan.com/coder/jalal060801">Muhamad Jalaludin</a></div>
+											</div>
+										</div>
+									</div>
+
+									</div><div class="row">
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/100-fungsi-paling-populer-di-php-5b4c1cea92f36" title="100 Fungsi Paling Populer di PHP">
+													<img src="https://static.cdn-cdpl.com/340x195/2dd7d3ba70bcbe34f8b0d7242c773a78/php_100_function.png" class="thumb-img" alt="100 Fungsi Paling Populer di PHP">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/100-fungsi-paling-populer-di-php-5b4c1cea92f36" title="100 Fungsi Paling Populer di PHP">100 Fungsi Paling Populer di PHP</a></h3>
+												<div class="post-author "><a href="https://www.codepolitan.com/coder/budhiluhoer">Muhammad Budhiluhoer</a></div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/php-73-a-look-at-json-error-handling-5b4c3ac24bcb9" title="PHP 7.3: A Look at JSON Error Handling">
+													<img src="https://static.cdn-cdpl.com/340x195/6f69c54dd7b1279b3420a3d7d7d7b237/cover-01.jpg" class="thumb-img" alt="PHP 7.3: A Look at JSON Error Handling">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/news">News</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/php-73-a-look-at-json-error-handling-5b4c3ac24bcb9" title="PHP 7.3: A Look at JSON Error Handling">PHP 7.3: A Look at JSON Error Handling</a></h3>
+												<div class="post-author "><a href="https://www.codepolitan.com/coder/jalal060801">Muhamad Jalaludin</a></div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/mengenal-10-heuristic-usability-pada-user-interface-5b4481dc6d6d2" title="Mengenal 10 Heuristic Usability pada User Interface">
+													<img src="https://static.cdn-cdpl.com/340x195/2dd7d3ba70bcbe34f8b0d7242c773a78/10-heuristics1.png" class="thumb-img" alt="Mengenal 10 Heuristic Usability pada User Interface">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/mengenal-10-heuristic-usability-pada-user-interface-5b4481dc6d6d2" title="Mengenal 10 Heuristic Usability pada User Interface">Mengenal 10 Heuristic Usability pada User Interface</a></h3>
+												<div class="post-author "><a href="https://www.codepolitan.com/coder/budhiluhoer">Muhammad Budhiluhoer</a></div>
+											</div>
+										</div>
+									</div>
+
+									</div><div class="row">
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/library-javascript-menarik-tahun-2018-5b45b6a00c549" title="Library JavaScript Menarik Tahun 2018">
+													<img src="https://static.cdn-cdpl.com/340x195/2dd7d3ba70bcbe34f8b0d7242c773a78/js.png" class="thumb-img" alt="Library JavaScript Menarik Tahun 2018">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/library-javascript-menarik-tahun-2018-5b45b6a00c549" title="Library JavaScript Menarik Tahun 2018">Library JavaScript Menarik Tahun 2018</a></h3>
+												<div class="post-author "><a href="https://www.codepolitan.com/coder/budhiluhoer">Muhammad Budhiluhoer</a></div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/wajib-hadir-ini-10-konten-seru-bekraf-game-prime-2018" title="Wajib Hadir, Ini 10 Konten Seru BEKRAF Game Prime 2018!">
+													<img src="https://static.cdn-cdpl.com/340x195/c420ea5d6888e29a87437c2d005edd57/41.jpg" class="thumb-img" alt="Wajib Hadir, Ini 10 Konten Seru BEKRAF Game Prime 2018!">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/news">News</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/wajib-hadir-ini-10-konten-seru-bekraf-game-prime-2018" title="Wajib Hadir, Ini 10 Konten Seru BEKRAF Game Prime 2018!">Wajib Hadir, Ini 10 Konten Seru BEKRAF Game Prime 2018!</a></h3>
+												<div class="post-author official-author"><a href="https://www.codepolitan.com/coder/hadyanpalupi">Hadyan Palupi</a></div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col-md-4">
+										<div class="post-item">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/bekraf-game-prime-2018-siap-digelar" title="BEKRAF Game Prime 2018 Siap Digelar!">
+													<img src="https://static.cdn-cdpl.com/340x195/c420ea5d6888e29a87437c2d005edd57/31.jpg" class="thumb-img" alt="BEKRAF Game Prime 2018 Siap Digelar!">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/news">News</a></div>
+												<h3 class="post-title"><a href="https://www.codepolitan.com/bekraf-game-prime-2018-siap-digelar" title="BEKRAF Game Prime 2018 Siap Digelar!">BEKRAF Game Prime 2018 Siap Digelar!</a></h3>
+												<div class="post-author official-author"><a href="https://www.codepolitan.com/coder/hadyanpalupi">Hadyan Palupi</a></div>
+											</div>
+										</div>
+									</div>
+
+																</div>
+						</div>
+						<!-- END: CONTENT LOOP -->
+
+						<!-- PAGINATION -->
+						<div class="pagination-wrapper">
+							<ul class="pagination"><li class="disabled"><span>&laquo;</span></li> <li class="active"><span>1</span></li><li><a href="https://www.codepolitan.com/articles?page=2">2</a></li><li><a href="https://www.codepolitan.com/articles?page=3">3</a></li><li><a href="https://www.codepolitan.com/articles?page=4">4</a></li><li><a href="https://www.codepolitan.com/articles?page=5">5</a></li><li><a href="https://www.codepolitan.com/articles?page=6">6</a></li><li><a href="https://www.codepolitan.com/articles?page=7">7</a></li><li><a href="https://www.codepolitan.com/articles?page=8">8</a></li><li class="disabled"><span>...</span></li><li><a href="https://www.codepolitan.com/articles?page=145">145</a></li><li><a href="https://www.codepolitan.com/articles?page=146">146</a></li> <li><a href="https://www.codepolitan.com/articles?page=2" rel="next">&raquo;</a></li></ul>
+						</div>
+						<!-- END: PAGINATION -->
+
+					</div>
+					<div class="col-md-3">
+
+						<!-- SIDEBAR -->
+						<div class="sidebar-popular-post">
+							<h3>Popular Articles</h3>
+
+							<div class="popular-loop">
+								<ul>
+																	</ul>
+							</div>
+						</div>
+
+
+						<!-- SIDEBAR TECHNOLOGY -->
+						<div class="sidebar-technology">
+	<h3>Technology</h3>
+
+	<div class="tech-loop">
+		<ul>
+			<li>
+				<a href="https://www.codepolitan.com/tag/javascript" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="javascript">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-js.png" class="img-circle"></div>
+					<div class="tech-title">JavaScript</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/php" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="php">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-php.png" class="img-circle"></div>
+					<div class="tech-title">PHP</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/python" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="python">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-python.png" class="img-circle"></div>
+					<div class="tech-title">Python</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/android" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="android">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-android.png" class="img-circle"></div>
+					<div class="tech-title">Android</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/java" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="java">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-java.png" class="img-circle"></div>
+					<div class="tech-title">Java</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/microcontroller" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="microcontroller">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-microcontroller.png" class="img-circle"></div>
+					<div class="tech-title">Microcontroller</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/angularjs" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="angularjs">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-angular.png" class="img-circle"></div>
+					<div class="tech-title">Angular.js</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/nodejs" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="nodejs">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-nodejs.png" class="img-circle"></div>
+					<div class="tech-title">Node.js</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/reactjs" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="reactjs">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-reactjs.png" class="img-circle"></div>
+					<div class="tech-title">React.js</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/ruby" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="ruby">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-ruby.png" class="img-circle"></div>
+					<div class="tech-title">Ruby</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/html" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="html">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-html.png" class="img-circle"></div>
+					<div class="tech-title">HTML</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/django" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="django">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-django.png" class="img-circle"></div>
+					<div class="tech-title">Django</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/jquery" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="jquery">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-jquery.png" class="img-circle"></div>
+					<div class="tech-title">JQuery</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/internet-of-things" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="internet-of-things">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-iot.png" class="img-circle"></div>
+					<div class="tech-title">Internet of Things</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/open-source" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="open-source">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-opensource.png" class="img-circle"></div>
+					<div class="tech-title">Open Source</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/virtual-reality" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="virtual-reality">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-vr.png" class="img-circle"></div>
+					<div class="tech-title">Virtual Reality</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/game-development" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="game-development">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-game.png" class="img-circle"></div>
+					<div class="tech-title">Game Development</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.codepolitan.com/tag/database" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="database">
+					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-database.png" class="img-circle"></div>
+					<div class="tech-title">Database</div>
+				</a>
+			</li>
+
+			<!--
+			Ruby on Rails
+			Google
+			Microsoft
+			Objective-C
+			Wordpress
+			Linux
+			Database
+			-->
+		</ul>
+	</div>
+</div>
+<!-- SIDEBAR -->						<!-- END: SIDEBAR TECHNOLOGY -->
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- END: SECTION UPDATES -->
+
+	</div>
+	<!-- END: MAIN WRAPPER -->
+
 {% endblock %}

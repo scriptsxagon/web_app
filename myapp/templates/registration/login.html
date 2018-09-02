@@ -1,48 +1,74 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load widget_tweaks %}
+<!-- MAIN WRAPPER -->
+	<div class="cp-wrapper margin-top-wrapper">
 
-<header class="masthead">
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="row">
+		<!-- SECTION UPDATES -->
+		<section class="content-wrapper">
+			<div class="container">
 
-                <div class="col-md-4 ml-auto">
-                </div>
+				<div class="row">
+					<div class="col-md-4 col-md-offset-4">
 
-                <div class="col-md-4 ml-auto text-white">
-                    <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-heading text-white"><strong>LOGIN</strong></h2><br>
-                    </div>
-                    <form method="post">
-                        {% csrf_token %}
-                        {% for field in form %}
-                        <div class="form-group text-white">
-                            {{ field.label_tag }}<br>
-                            {% render_field field class="form-control" %}
-                            <!--{% if field.help_text %}-->
-                            <!--<small style="color: grey">{{ field.help_text }}</small>-->
-                            <!--{% endif %}-->
-                            {% for error in field.errors %}
-                            <p style="color: red">{{ error }}</p>
-                            {% endfor %}
-                        </div>
-                        {% endfor %}
-                        {% if form.non_field_errors %}
-                          <div class="alert alert-danger" role="alert">
-                            {% for error in form.non_field_errors %}
-                              <p{% if forloop.last %} class="mb-0"{% endif %}>Username dan password yang anda masukan salah</p>
-                            {% endfor %}
-                          </div>
-                        {% endif %}
-                        <button type="submit" class="btn btn-primary">Masuk</button>&nbsp; Lupa password?  <a
-                            href="/reset/">Klik disini</a
-                    </form>
-                </div>
-                <div class="col-md-4 ml-auto">
-                </div>
-            </div>
-        </div>
-    </section>
-</header>
+						<!-- AUTH WRAPPER -->
+						<div class="auth-wrapper">
+
+							<div class="auth-logo">
+								<a href="https://www.codepolitan.com"><img alt="CodePolitan" src="https://www.codepolitan.com/assets/img/codepolitan_logo.png" class="logo-img"></a>
+							</div>
+
+							<h3>Account / Login</h3>
+
+							<form class="form-horizontal" method="post">
+                            {% csrf_token %}
+
+
+								<fieldset>
+
+									<div class="form-field">
+										<label for="identity">Username/Email</label>
+										<input name="username" type="text" class="form-control" />
+									</div>
+
+									<div class="form-field">
+										<label for="pwd">Password</label>
+										<input name="password" id="password" type="password" class="form-control">
+									</div>
+
+									<div class="form-button">
+										<input type="submit" value="Sign In" class="btn btn-cp btn-block btn-lg" />
+									</div>
+
+
+									<div class="form-auth-socmed">
+										<div>or connect with :</div>
+
+										<div class="auth-socmed-icon">
+											<a href="https://www.codepolitan.com/users/facebook">
+												<span class="fa fa-facebook-square"></span>
+											</a>
+											<a href="https://www.codepolitan.com/users/github">
+												<span class="fa fa-github-square"></span>
+											</a>
+										</div>
+									</div>
+
+									<div class="text-center">
+										<div>Forgot password?&nbsp;<a href="https://www.codepolitan.com/users/forgot-password">Click here to reset</a></div>
+										<div>New User?&nbsp;<a href="https://www.codepolitan.com/users/register">Click here to register</a></div>
+									</div>
+								</fieldset>
+							</form>
+
+						</div>
+						<!-- END: AUTH WRAPPER -->
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+	</div>
+
 {% endblock %}
