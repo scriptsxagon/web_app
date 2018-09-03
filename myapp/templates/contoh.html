@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="portfolio" id="portfolio">
+    <div class="container mt-5">
+        <div class="main-full">
+            <div class="row">
+                <div class="col-md-4 well">
+                    <img src="/static/img/plane.gif"/>
+                </div>
+                <div class="col-md-8 well">
+                    <h1>Selamat datang Whizkids!</h1>
+                    <!--<blockquote class="blockquote">-->
+                        <!--<p class="mb-0">Whizkids: seseorang yang luar biasa cerdas, pintar, atau sukses terutama pada-->
+                            <!--usia dini </p>-->
+                        <!--<footer class="blockquote-footer">Ensiklopedi <a-->
+                                <!--href="https://www.merriam-webster.com/dictionary/whiz%20kid"><cite title="Source Title">Merriam-Webster</cite></a>-->
+                        <!--</footer>-->
+                    <!--</blockquote>-->
+                    <blockquote class="blockquote">
+                        <p class="mb-0">"Apa yang sudah kamu koding hari ini?"&nbsp;<i class="em em-slightly_smiling_face"></i></p>
+                        <footer class="blockquote-footer">Mr. Eko
+                        </footer>
+                    </blockquote>
+
+                </div>
+            </div>
+            <hr/>
+            <div class="container">
+                <div class="row">
+
+                    {% if register_course == '' %}
+                    {% for course in courses %}
+                    <div class="card mr-2" style="width: 20rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ course.name }}</h5>
+                            <p class="card-text"> {{ course.summary | safe | truncatewords:"40"|linebreaks }}</p>
+                            <!--<p><a href="{{ url_for_full_content }}">Tampilkan lengkap</a></p>-->
+                            <a href="/register_course/ "class="btn btn-primary">Daftar</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% elif not register_course == '' %}
+                    {% for course in courses %}
+                    <div class="card mr-2" style="width: 20rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ course.name }}</h5>
+                            <p class="card-text"> {{ course.summary | safe | truncatewords:"40"|linebreaks }}</p>
+                            <!--<p><a href="{{ url_for_full_content }}">Tampilkan lengkap</a></p>-->
+                            <a href="/course/{{ course.id }}/0/" class="btn btn-primary">Mulai</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
