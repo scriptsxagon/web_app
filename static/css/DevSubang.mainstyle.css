@@ -311,7 +311,7 @@ body{color:#323232;font-family:'Open Sans',sans-serif;font-size:14px;position:re
 
 a{color:#ff6600;text-decoration:none;outline:0}
 
-a:focus,a:hover{color:#188f7f;text-decoration:none;outline:0}
+a:focus,a:hover{color:#ff6611;text-decoration:none;outline:0}
 
 .navbar-brand{margin-right:0;padding-right:0}
 
@@ -1205,7 +1205,7 @@ ul.nav.navbar-nav{margin-left:20px;margin-top:10px}
 
 .cp-jumbotron.jumbotron-company{background:url(../img/demo/coding-space.jpg) center center no-repeat #20231E;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;color:#fff;padding-top:150px;padding-bottom:150px}
 
-.cp-jumbotron.jumbotron-banner{background:url(../img/demo/bg_banner3.jpg) center center no-repeat #F0F0F0;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;color:#fff;padding-top:120px;padding-bottom:120px}
+.cp-jumbotron.jumbotron-banner{background:url(../img/demo/bg_banner3.jpg) center center no-repeat #F0F0F0;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;color:#fff;padding-top:170px;padding-bottom:170px}
 
 .cp-jumbotron.jumbotron-banner p{font-size:20px;margin-top:30px}.cp-jumbotron.jumbotron-logout{background:#fff;padding-top:100px;padding-bottom:100px;color:#323232}
 
