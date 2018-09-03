@@ -773,11 +773,11 @@ ul.nav.navbar-nav{margin-left:20px;margin-top:10px}
 
 .home-search .search-box{position:relative}
 
-.home-search .search-box .search-input{border:2px solid #DCDCDC;height:45px;font-size:18px}
+.home-search .search-box .search-input{border-radius:5%;border:2px solid #a6a6a6;height:45px;font-size:18px}
 
 .home-search .search-box .search-button{position:absolute;top:0;right:0;height:45px;width:55px;background:0 0;border:2px solid transparent;font-size:18px;color:#999}
 
-.home-search .search-box .search-button:focus,.home-search .search-box .search-button:hover{color:#1fbba6}
+.home-search .search-box .search-button:focus,.home-search .search-box .search-button:hover{color:#333}
 
 .content-error{padding-top:40px;padding-bottom:40px}
 
@@ -1341,7 +1341,7 @@ ul.nav.navbar-nav{margin-left:20px;margin-top:10px}
 
 .btn.btn-padding-xl{padding-left:50px;padding-right:50px}
 
-.btn.btn-default{color:#999!important;background:0 0;border-color:#b3b3b3}
+.btn.btn-default{color:#333;background:0 0;border-color:#b3b3b3}
 
 .btn.btn-default.active,.btn.btn-default:focus,.btn.btn-default:hover{background:rgba(255,255,255,.2);color:#999;border-color:#ccc;-webkit-box-shadow:0 0 0 0 transparent;-moz-box-shadow:0 0 0 0 transparent;box-shadow:0 0 0 0 transparent}
 
