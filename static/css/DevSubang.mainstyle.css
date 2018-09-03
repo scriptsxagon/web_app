@@ -309,13 +309,13 @@ body{color:#323232;font-family:'Open Sans',sans-serif;font-size:14px;position:re
 
 .cp-wrapper.margin-top-no-padding-wrapper{margin-top:65px}
 
-a{color:#1fbba6;text-decoration:none;outline:0}
+a{color:#ff6600;text-decoration:none;outline:0}
 
 a:focus,a:hover{color:#188f7f;text-decoration:none;outline:0}
 
 .navbar-brand{margin-right:0;padding-right:0}
 
-ul.nav.navbar-nav{margin-left:20px}
+ul.nav.navbar-nav{margin-left:20px;margin-top:10px}
 
 .sidebar-event h3{margin-top:0;margin-bottom:25px}
 
@@ -1077,9 +1077,9 @@ ul.nav.navbar-nav{margin-left:20px}
 
 .navbar.navbar-default.navbar-fixed-top.navbar-cp .nav.navbar-nav li.dropdown.dropdown-small .dropdown-menu{width:250px}.navbar.navbar-default.navbar-fixed-top.navbar-cp .nav.navbar-nav li.dropdown.dropdown-small .dropdown-menu li{padding:0}
 
-.navbar.navbar-default.navbar-fixed-top.navbar-cp .nav.navbar-nav.navbar-right{margin-right:0}
+.navbar.navbar-default.navbar-fixed-top.navbar-cp .nav.navbar-nav.navbar-right{margin-right:0;}
 
-.navbar.navbar-default.navbar-fixed-top.navbar-cp .nav.navbar-nav.navbar-right li{margin-right:0;margin-left:10px}
+.navbar.navbar-default.navbar-fixed-top.navbar-cp .nav.navbar-nav.navbar-right li{margin-right:0;margin-left:10px;margin-top:0px}
 
 .navbar.navbar-default.navbar-fixed-top.navbar-cp .nav.navbar-nav.navbar-right li .nav-name-user{color:#323232;text-decoration:none;height:45px;line-height:45px;padding:0 5px}
 

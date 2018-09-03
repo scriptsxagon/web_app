@@ -116,6 +116,7 @@
 					<div class="col-md-6">
 						<h2 class="updates-title">SEPUTAR KODING</h2>
 					</div>
+
 					<div class="col-md-3">
 						<div class="home-search">
 							<div class="search-box">
@@ -137,135 +138,22 @@
 				<div class="content-loop">
 					<div class="row">
 
-
+{% for course in course %}
 							<div class="col-md-3">
 								<div class="post-item">
 									<div class="post-thumb">
-										<a href="/login/" title="Apa yang Sebenarnya Dilakukan Incognito Mode " class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Apa yang Sebenarnya Dilakukan Incognito Mode ">
-											<img src="https://static.cdn-cdpl.com/270x135/d3cf87e0e00038b907551b1638c4a94a/Cover-Artikel(Incognito).jpg" class="thumb-img" alt="Apa yang Sebenarnya Dilakukan Incognito Mode ">
+										<a href="/login/" class="record-data" data-id="">
+											<img src="{{ course.img }}" class="thumb-img" >
 										</a>
 									</div>
 									<div class="post-body">
-										<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
-										<h3 class="post-title"><a href="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" title="Apa yang Sebenarnya Dilakukan Incognito Mode " class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Apa yang Sebenarnya Dilakukan Incognito Mode ">Apa yang Sebenarnya Dilakukan Incognito Mode </a></h3>
-										<div class="post-author "><a href="http://www.codepolitan.com/coder/Geeraldo">Geeraldo Jose</a></div>
+										<div class="post-category"><a href="#">{{ course.name }}</a></div>
+										<h3 class="post-title"><a href="#">{{ course.summary }}</a></h3>
+										<div class="post-author "><a href="#">Disini</a></div>
 									</div>
 								</div>
 							</div>
-
-
-							<div class="col-md-3">
-								<div class="post-item">
-									<div class="post-thumb">
-										<a href="https://www.codepolitan.com/mengenal-10-heuristic-usability-pada-user-interface-5b4481dc6d6d2" title="Mengenal 10 Heuristic Usability pada User Interface" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Mengenal 10 Heuristic Usability pada User Interface">
-											<img src="https://static.cdn-cdpl.com/270x135/2dd7d3ba70bcbe34f8b0d7242c773a78/10-heuristics1.png" class="thumb-img" alt="Mengenal 10 Heuristic Usability pada User Interface">
-										</a>
-									</div>
-									<div class="post-body">
-										<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
-										<h3 class="post-title"><a href="https://www.codepolitan.com/mengenal-10-heuristic-usability-pada-user-interface-5b4481dc6d6d2" title="Mengenal 10 Heuristic Usability pada User Interface" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Mengenal 10 Heuristic Usability pada User Interface">Mengenal 10 Heuristic Usability pada User Interface</a></h3>
-										<div class="post-author "><a href="http://www.codepolitan.com/coder/budhiluhoer">Muhammad Budhiluhoer</a></div>
-									</div>
-								</div>
-							</div>
-
-
-							<div class="col-md-3">
-								<div class="post-item">
-									<div class="post-thumb">
-										<a href="https://www.codepolitan.com/10-aplikasi-code-editor-untuk-ngoding-di-android-5b35c560965d2" title="10 Aplikasi Code Editor Untuk Ngoding di Android" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="10 Aplikasi Code Editor Untuk Ngoding di Android">
-											<img src="https://static.cdn-cdpl.com/270x135/998b78e349061b4971c0a2b0e8d6be41/Cover-Artikel(10-Apk-Ngoding-Android).jpg" class="thumb-img" alt="10 Aplikasi Code Editor Untuk Ngoding di Android">
-										</a>
-									</div>
-									<div class="post-body">
-										<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
-										<h3 class="post-title"><a href="https://www.codepolitan.com/10-aplikasi-code-editor-untuk-ngoding-di-android-5b35c560965d2" title="10 Aplikasi Code Editor Untuk Ngoding di Android" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="10 Aplikasi Code Editor Untuk Ngoding di Android">10 Aplikasi Code Editor Untuk Ngoding di Android</a></h3>
-										<div class="post-author "><a href="http://www.codepolitan.com/coder/Geeraldo">Geeraldo Jose</a></div>
-									</div>
-								</div>
-							</div>
-
-
-							<div class="col-md-3">
-								<div class="post-item">
-									<div class="post-thumb">
-										<a href="https://www.codepolitan.com/10-metode-array-pada-javascript-yang-wajib-kamu-ketahui-5b33a047b110a" title="10 Metode Array pada Javascript yang Wajib Kamu Ketahui" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="10 Metode Array pada Javascript yang Wajib Kamu Ketahui">
-											<img src="https://static.cdn-cdpl.com/270x135/5615bb41d81fad8fe992985aec0e5f29/js.jpg" class="thumb-img" alt="10 Metode Array pada Javascript yang Wajib Kamu Ketahui">
-										</a>
-									</div>
-									<div class="post-body">
-										<div class="post-category"><a href="https://www.codepolitan.com/category/tutorial">Tutorial</a></div>
-										<h3 class="post-title"><a href="https://www.codepolitan.com/10-metode-array-pada-javascript-yang-wajib-kamu-ketahui-5b33a047b110a" title="10 Metode Array pada Javascript yang Wajib Kamu Ketahui" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="10 Metode Array pada Javascript yang Wajib Kamu Ketahui">10 Metode Array pada Javascript yang Wajib Kamu Ketahui</a></h3>
-										<div class="post-author "><a href="http://www.codepolitan.com/coder/istidana">Istidana Harjanti</a></div>
-									</div>
-								</div>
-							</div>
-
-							</div><div class="row">
-							<div class="col-md-3">
-								<div class="post-item">
-									<div class="post-thumb">
-										<a href="https://www.codepolitan.com/microsoft-tenggelamkan-data-centre-untuk-sistem-pendinginan-yang-lebih-efisien-5b17854abe9d8" title="Microsoft Tenggelamkan Data Centre Untuk Sistem Pendinginan yang Lebih Efisien" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Microsoft Tenggelamkan Data Centre Untuk Sistem Pendinginan yang Lebih Efisien">
-											<img src="https://static.cdn-cdpl.com/270x135/8b81700471e8917196897fec5d8e28e9/_101886535_rory5.jpg" class="thumb-img" alt="Microsoft Tenggelamkan Data Centre Untuk Sistem Pendinginan yang Lebih Efisien">
-										</a>
-									</div>
-									<div class="post-body">
-										<div class="post-category"><a href="https://www.codepolitan.com/category/news">News</a></div>
-										<h3 class="post-title"><a href="https://www.codepolitan.com/microsoft-tenggelamkan-data-centre-untuk-sistem-pendinginan-yang-lebih-efisien-5b17854abe9d8" title="Microsoft Tenggelamkan Data Centre Untuk Sistem Pendinginan yang Lebih Efisien" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Microsoft Tenggelamkan Data Centre Untuk Sistem Pendinginan yang Lebih Efisien">Microsoft Tenggelamkan Data Centre Untuk Sistem Pendinginan yang Lebih Efisien</a></h3>
-										<div class="post-author "><a href="http://www.codepolitan.com/coder/sukaturu">Takagi Fujimaru</a></div>
-									</div>
-								</div>
-							</div>
-
-
-							<div class="col-md-3">
-								<div class="post-item">
-									<div class="post-thumb">
-										<a href="https://www.codepolitan.com/linux-vs-unix-apa-perbedaannya-5b044cba00f5c" title="Linux vs Unix: Apa Perbedaannya?" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Linux vs Unix: Apa Perbedaannya?">
-											<img src="https://static.cdn-cdpl.com/270x135/998b78e349061b4971c0a2b0e8d6be41/Cover-Artikel(Linux-VS-Unix).jpg" class="thumb-img" alt="Linux vs Unix: Apa Perbedaannya?">
-										</a>
-									</div>
-									<div class="post-body">
-										<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
-										<h3 class="post-title"><a href="https://www.codepolitan.com/linux-vs-unix-apa-perbedaannya-5b044cba00f5c" title="Linux vs Unix: Apa Perbedaannya?" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Linux vs Unix: Apa Perbedaannya?">Linux vs Unix: Apa Perbedaannya?</a></h3>
-										<div class="post-author "><a href="http://www.codepolitan.com/coder/sukaturu">Takagi Fujimaru</a></div>
-									</div>
-								</div>
-							</div>
-
-
-							<div class="col-md-3">
-								<div class="post-item">
-									<div class="post-thumb">
-										<a href="https://www.codepolitan.com/tips-memilih-tempat-hosting5ad6c3f6236a2" title="Tips Memilih Tempat Hosting" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Tips Memilih Tempat Hosting">
-											<img src="https://static.cdn-cdpl.com/270x135/998b78e349061b4971c0a2b0e8d6be41/Cover-Artikel(Tips-Tempat-Hosting).jpg" class="thumb-img" alt="Tips Memilih Tempat Hosting">
-										</a>
-									</div>
-									<div class="post-body">
-										<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
-										<h3 class="post-title"><a href="https://www.codepolitan.com/tips-memilih-tempat-hosting5ad6c3f6236a2" title="Tips Memilih Tempat Hosting" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Tips Memilih Tempat Hosting">Tips Memilih Tempat Hosting</a></h3>
-										<div class="post-author official-author"><a href="http://www.codepolitan.com/coder/bagus">Lord Voldemort</a></div>
-									</div>
-								</div>
-							</div>
-
-
-							<div class="col-md-3">
-								<div class="post-item">
-									<div class="post-thumb">
-										<a href="https://www.codepolitan.com/belajar-cara-membuat-game-2d-dengan-python-dan-arcade-5adff78d1db9b" title="Belajar Cara Membuat Game 2D dengan Python dan Arcade" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Belajar Cara Membuat Game 2D dengan Python dan Arcade">
-											<img src="https://static.cdn-cdpl.com/270x135/8b81700471e8917196897fec5d8e28e9/python-arcade-2d-game.png" class="thumb-img" alt="Belajar Cara Membuat Game 2D dengan Python dan Arcade">
-										</a>
-									</div>
-									<div class="post-body">
-										<div class="post-category"><a href="https://www.codepolitan.com/category/tutorial">Tutorial</a></div>
-										<h3 class="post-title"><a href="https://www.codepolitan.com/belajar-cara-membuat-game-2d-dengan-python-dan-arcade-5adff78d1db9b" title="Belajar Cara Membuat Game 2D dengan Python dan Arcade" class="record-data" data-action="featured-articles-item" data-position="home-articles" data-id="Belajar Cara Membuat Game 2D dengan Python dan Arcade">Belajar Cara Membuat Game 2D dengan Python dan Arcade</a></h3>
-										<div class="post-author "><a href="http://www.codepolitan.com/coder/sukaturu">Takagi Fujimaru</a></div>
-									</div>
-								</div>
-							</div>
-
-
+						{% endfor %}
 					</div>
 				</div>
 			</div>

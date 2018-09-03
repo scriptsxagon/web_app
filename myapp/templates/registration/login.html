@@ -14,11 +14,7 @@
 						<!-- AUTH WRAPPER -->
 						<div class="auth-wrapper">
 
-							<div class="auth-logo">
-								<a href="https://www.codepolitan.com"><img alt="CodePolitan" src="https://www.codepolitan.com/assets/img/codepolitan_logo.png" class="logo-img"></a>
-							</div>
-
-							<h3>Account / Login</h3>
+							<h4>Account / Login</h4>
 
 							<form class="form-horizontal" method="post">
                             {% csrf_token %}
@@ -40,23 +36,10 @@
 										<input type="submit" value="Sign In" class="btn btn-cp btn-block btn-lg" />
 									</div>
 
-
-									<div class="form-auth-socmed">
-										<div>or connect with :</div>
-
-										<div class="auth-socmed-icon">
-											<a href="https://www.codepolitan.com/users/facebook">
-												<span class="fa fa-facebook-square"></span>
-											</a>
-											<a href="https://www.codepolitan.com/users/github">
-												<span class="fa fa-github-square"></span>
-											</a>
-										</div>
-									</div>
-
+									</br></br></br></br>
 									<div class="text-center">
 										<div>Forgot password?&nbsp;<a href="https://www.codepolitan.com/users/forgot-password">Click here to reset</a></div>
-										<div>New User?&nbsp;<a href="https://www.codepolitan.com/users/register">Click here to register</a></div>
+										<div>New User?&nbsp;<a href="/signup/">Click here to register</a></div>
 									</div>
 								</fieldset>
 							</form>

@@ -5,15 +5,12 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import UpdateView,ListView
-from myapp.models import Lesson, Course, Isiforum, Subisi
+from myapp.models import Lesson, Course
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from myapp.forms import SignUpForm
 
 def index(request):
-    if not request.user.is_authenticated():
         return render(request,'index.html')
-    else:
-        return render(request,'index_login.html')
 
 def signup(request):
             if request.method == 'POST':
@@ -38,67 +35,5 @@ class UserUpdateView(UpdateView):
 
     def get_object(self):
         return self.request.user
-
-@login_required
-def pembelajaran(request):
-    courses = Course.objects.all().order_by('order')
-    page = request.GET.get('page', 1)
-
-    paginator = Paginator(courses, 4)
-    try:
-        courses = paginator.page(page)
-    except PageNotAnInteger:
-        courses = paginator.page(1)
-    except EmptyPage:
-        courses = paginator.page(paginator.num_pages)
-
-    return render(request, 'pembelajaran.html', {'courses': courses})
-
-@login_required
-def course(request, id, lesson_id):
-    lessons = Lesson.objects.filter(course__id=id).order_by('order')
-    course = Course.objects.filter(id=id)[0]
-    active_lesson = int(lesson_id)
-    if lesson_id == '0':
-        content = course.summary
-    else:
-        data = Lesson.objects.filter(id=lesson_id).order_by('order')[0]
-        content = data.konten
-    return render(request, 'lesson.html', {'lessons': lessons,
-                                           'course': course,
-                                           'content': content,
-                                           'active_lesson': active_lesson}
-                  )
-@login_required
-def isiforum(request, id, subisi_id):
-    subisi = Subisi.objects.filter(isiforum__id=id).order_by('order')
-    isiforum = Isiforum.objects.filter(id=id)[0]
-    subisi_aktif = int(subisi_id)
-    if subisi_id == '0':
-        content = isiforum.summary
-    else:
-        data = Subisi.objects.filter(id=subisi_id).order_by('order')[0]
-        content = data.konten
-    return render(request, 'subisi.html', {'subisi': subisi,
-                                           'isiforum': isiforum,
-                                           'content': content,
-                                           'subisi_aktif': subisi_aktif}
-                  )
-@login_required
-def forum(request):
-    isiforum = Isiforum.objects.all().order_by('order')
-    page = request.GET.get('page', 1)
-
-    paginator = Paginator(isiforum, 4)
-    try:
-        isiforum = paginator.page(page)
-    except PageNotAnInteger:
-        isiforum = paginator.page(1)
-    except EmptyPage:
-        isiforum = paginator.page(paginator.num_pages)
-
-    return render(request, 'forum.html', {'isiforum': isiforum})
-
-
 
 # Create your views here.
