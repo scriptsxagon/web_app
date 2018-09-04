@@ -11,7 +11,7 @@ class Course(models.Model):
     content = RichTextUploadingField()
 
     def  __str__(self):
-        return '[%s] %s' % (self.code_name, self.name, self.materi, self.order)
+        return '[%s] %s' % (self.code_name, self.name, self.author, self.order)
 
 class CourseFirst(models.Model):
     order = models.IntegerField()
