@@ -8,7 +8,7 @@ class Course(models.Model):
     name = models.CharField(max_length=70)
     author = models.CharField(max_length=20)
     img = models.ImageField(blank=True, upload_to='static/img')
-    content = RichTextUploadingField()
+    content = RichTextUploadingField(default='isi')
 
     def  __str__(self):
         return '[%s] %s' % (self.code_name, self.order)
