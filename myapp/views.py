@@ -5,14 +5,14 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import UpdateView,ListView
-from myapp.models import Course, CourseFirst
+from myapp.models import Course, Lesson
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from myapp.forms import SignUpForm
 
 def index(request):
     course = Course.objects.all().order_by('order')
-    coursef = CourseFirst.objects.all().order_by('order')
-    return render(request,'index.html',  {'courses': course}, {'coursef': coursef})
+    lesson = Lesson.objects.all().order_by('order')
+    return render(request,'index.html',{'courses': course, 'lessons': lesson})
 
 def signup(request):
             if request.method == 'POST':

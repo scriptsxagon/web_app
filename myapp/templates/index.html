@@ -253,21 +253,22 @@
 
 									<div class="learn-loop no-margin-bottom">
 										<div class="row">
-
+											{% for lesson in lessons %}
 												<div class="col-md-4">
 													<div class="post-item post-only-border">
 														<div class="post-thumb">
 															<a href="https://www.codepolitan.com/interactive-coding/c" title="C" class="record-data" data-action="interactive-coding-item" data-position="home-interactive-coding" data-id="https://www.codepolitan.com/interactive-coding/c">
-																<img src="https://static.cdn-cdpl.com/source/00600bfb26f44c7427a680235c2e3042/c-lang.png" class="thumb-img" alt="">
+																<img src="/{{ lesson.img }}" class="thumb-img" alt="">
 															</a>
 														</div>
 														<div class="post-body">
-															<div class="post-category"><a href="#">Interactive Coding</a></div>
-															<h3 class="post-title"><a href="#">C</a></h3>
-															<div class="post-button"><a href="#" class="btn btn-default">Mulai Belajar</a></div>
+															<div class="post-category"><a href="#">{{ lesson.code_name }}</a></div>
+															<h3 class="post-title"><a href="#">{{ lesson.materi }}</a></h3>
+															<div class="post-button"><a href="#" class="btn btn-default">{{ lesson.name }}</a></div>
 														</div>
 													</div>
 												</div>
+											{% endfor %}
 										</div>
 									</div>
 								</div>
