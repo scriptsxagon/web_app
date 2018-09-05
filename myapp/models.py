@@ -23,3 +23,11 @@ class Lesson(models.Model):
 
     def  __str__(self):
         return '[%s] %s' % (self.code_name, self.order)
+
+class Event(models.Model):
+    name = models.CharField(max_length=70, default='')
+    lokasi = models.CharField(max_length=50)
+    tanggal = models.DateField()
+
+    def __str__(self):
+        return  '[%s] %s' % (self.lokasi, self.tanggal)

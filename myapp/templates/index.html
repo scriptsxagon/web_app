@@ -189,36 +189,25 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="home-sidebar sidebar-event">
-						<h3><i class="fa fa-calendar margin-xs-right"></i> UPCOMING TECH EVENT</h3>
+						<h3><i class="fa fa-calendar margin-xs-right"></i> COMING SOON !</h3>
 
+						{% for event in events %}
 						<div class="event-loop">
 
 									<ul>
 										<li class="event-item">
-											<div class="event-title"><a href="https://www.codepolitan.com/event/dewatalks-2018-web-app-security-5b6d4a83db2b8" class="record-data" data-action="event-item" data-position="home-event" data-id="https://www.codepolitan.com/event/dewatalks-2018-web-app-security-5b6d4a83db2b8">Dewatalks 2018: Web App Security</a></div>
-											<div class="event-company"><span class="fa fa-calendar fa-fw"></span> Sep 6, 2018</div>
-											<div class="event-location"><span class="fa fa-map-marker fa-fw"></span> Jakarta <a href="https://www.codepolitan.com/event/dewatalks-2018-web-app-security-5b6d4a83db2b8" class="record-data" data-action="event-item" data-position="home-event" data-id="https://www.codepolitan.com/event/dewatalks-2018-web-app-security-5b6d4a83db2b8">Lihat Detail</a></div>
+											<div class="event-title"><a href="#" class="record-data" data-action="event-item" data-position="home-event" data-id="https://www.codepolitan.com/event/dewatalks-2018-web-app-security-5b6d4a83db2b8">{{ event.name }}</a></div>
+											<div class="event-company"><span class="fa fa-calendar fa-fw"></span>{{ event.tanggal }}</div>
+											<div class="event-location"><span class="fa fa-map-marker fa-fw"></span>{{ event.lokasi }}</div>
 										</li>
-																				<li class="event-item">
-											<div class="event-title"><a href="https://www.codepolitan.com/event/binus-job-expo-5b6aa06085ff7" class="record-data" data-action="event-item" data-position="home-event" data-id="https://www.codepolitan.com/event/binus-job-expo-5b6aa06085ff7">BINUS JOB EXPO</a></div>
-											<div class="event-company"><span class="fa fa-calendar fa-fw"></span> Sep 7, 2018</div>
-											<div class="event-location"><span class="fa fa-map-marker fa-fw"></span> Jakarta <a href="https://www.codepolitan.com/event/binus-job-expo-5b6aa06085ff7" class="record-data" data-action="event-item" data-position="home-event" data-id="https://www.codepolitan.com/event/binus-job-expo-5b6aa06085ff7">Lihat Detail</a></div>
-										</li>
-																				<li class="event-item">
-											<div class="event-title"><a href="#" class="record-data" data-action="event-item" data-position="home-event" data-id="https://www.codepolitan.com/event/pnb-web-design-competition-pnbwdc-2018-5b6d5be7ab992">PNB Web Design Competition (PNBWDC) 2018</a></div>
-											<div class="event-company"><span class="fa fa-calendar fa-fw"></span> Sep 8, 2018</div>
-											<div class="event-location"><span class="fa fa-map-marker fa-fw"></span> Bali <a href="#" class="record-data" data-action="event-item" data-position="home-event" data-id="#">Lihat Detail</a></div>
-										</li>
-																		</ul>
+									</ul>
 
 							<div class="margin-lg-top">
 								<a href="#" class="btn btn-default record-data" data-action="other-event" data-position="home-event">Lihat Semua Event<i class="fa fa-long-arrow-right"></i></a>
 							</div>
 
-							<div class="margin-md-top">
-								<a href="# class="record-data" data-action="how-to-submit-event" data-position="home-event">Cara publikasi event di CodePolitan</a>
-							</div>
 						</div>
+						{% endfor %}
 					</div>
 
 
