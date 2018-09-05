@@ -15,7 +15,7 @@ class Course(models.Model):
 
 class Lesson(models.Model):
     order = models.IntegerField()
-    code_name = models.CharField(max_length=10)
+    code_name_lesson = models.CharField(max_length=10)
     materi = models.CharField(max_length=20)
     name = models.CharField(max_length=70, default='')
     img = models.ImageField(blank=True, upload_to='static/img')

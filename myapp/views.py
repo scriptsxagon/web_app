@@ -32,7 +32,14 @@ def signup(request):
                 form = SignUpForm()
             return render(request, 'registration/signup.html', {'form': form})
 
+def lesson(request,code_name_lesson):
+    lessons = Lesson.objects.all()
+    lesson = Lesson.objects.filter(code_name_lesson=code_name_lesson)
+    return render (request, 'materi.html', {'lesson': lesson, 'lessons': lessons})
+
+
 def course(request,code_name):
-    course = Course.objects.get(code_name=code_name)
-    return render (request, 'course.html', {'course': course})
+    courses = Course.objects.all()
+    course = Course.objects.filter(code_name=code_name)
+    return render (request, 'course.html', {'course': course, 'courses': courses})
 

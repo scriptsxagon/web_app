@@ -1,40 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-default navbar-fixed-top navbar-cp">
-	<!--
-	<div id="head-alert" style="padding:5px;background:#e88b8b;color:#FFF;font-size:5px:" class="text-center">
-		<b>Pemberitahuan</b>, Jam 2 siang kami akan menonaktifkan Codepolitan. Bagi teman-teman yang sedang menulis silahkan save draft terlebih dahulu. &nbsp;&nbsp;<a href="#" id="btn-close-head-alert" class="btn-xs btn-danger">Close</a>
-	</div> -->
-	<div class="container-fluid">
-
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="https://www.codepolitan.com" title="CodePolitan"><img src="https://www.codepolitan.com/assets/img/codepolitan_logo.png" class="logo-img" alt="CodePolitan"></a>
-		</div>
-
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				<li ><a href="https://www.codepolitan.com/articles">UPDATE</a></li>
-				<li class="active"><a target="_blank" href="https://premium.codepolitan.com?utm_source=codepolitan">ONLINE LEARNING</a></li>
-		        <li ><a href="https://www.codepolitan.com/upcoming-event">EVENT</a></li>
-		        <li ><a href="https://devschool.id" class="record-data" data-action="goto-developer-school" data-position="navbar-menu" target="_blank">SCHOOL</a></li>
-		    </ul>
-
-			<ul class="nav navbar-nav navbar-right">
-									<li class="nav-btn"><a href="https://www.codepolitan.com/users/login?callback=https://www.codepolitan.com/interactive-coding/c">LOGIN</a></li>
-					<li class="nav-btn nav-signup"><a href="https://www.codepolitan.com/users/register" class="record-data" data-action="register-account" data-position="general-navbar">SIGN UP</a></li>
-								</ul>
-		</div>
-	</div>
-</nav>
-<!-- END: NAVBAR -->
 
     <!-- MAIN WRAPPER -->
     <div class="cp-wrapper">
@@ -86,11 +52,11 @@
 
 							<div class="share-icon-wrapper">
 								<ul>
-									<li><a href="#" text="Apa yang Sebenarnya Dilakukan Incognito Mode " url="#" social="facebook" class="btn-share social-facebook"><i class="fa fa-facebook-official"></i></a></li>
-									<li><a href="#" text="Apa yang Sebenarnya Dilakukan Incognito Mode " url="#" social="twitter" class="btn-share social-twitter"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#" text="Apa yang Sebenarnya Dilakukan Incognito Mode " url="#" social="googleplus" class="btn-share social-google-plus"><i class="fa fa-google-plus"></i></a></li>
-									<li><a href="#" text="Apa yang Sebenarnya Dilakukan Incognito Mode " url="#" social="linkedin" class="btn-share social-linkedin"><i class="fa fa-linkedin-square"></i></a></li>
-								</ul>
+									<li><a href="#" social="facebook" class="social-facebook"><i class="fa fa-facebook-official"></i></a></li>
+									<li><a href="#" social="twitter" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#" social="googleplus" class="social-google-plus"><i class="fa fa-google-plus"></i></a></li>
+									<li><a href="#" social="linkedin" class="social-linkedin"><i class="fa fa-linkedin-square"></i></a></li>
+                                </ul>
 							</div>
 						</div>
                         <!-- Close Like Fanspage -->
@@ -100,10 +66,10 @@
 
                             <div class="sidebar-body">
                                 <ul>
-                                    <li><a href="https://www.codepolitan.com/bahan-bahan-belajar-kotlin-59364cafad73f" class="record-data" data-action="random-article" data-position="interactive-coding">Bahan-bahan Belajar Kotlin</a></li>
-                                    <li><a href="https://www.codepolitan.com/google-siapkan-100-000-developer-android-hingga-2020" class="record-data" data-action="random-article" data-position="interactive-coding">Google Siapkan 100.000 Developer Android Hingga 2020</a></li>
-                                    <li><a href="https://www.codepolitan.com/6-bahasa-pemograman-baru-yang-wajib-kamu-pelajari-2016" class="record-data" data-action="random-article" data-position="interactive-coding">6 Bahasa Pemrograman Baru yang Wajib Dipelajari Tahun 2016</a></li>
-                                    <li><a href="https://www.codepolitan.com/manampilkan-markdown-5b28901f13f10" class="record-data" data-action="random-article" data-position="interactive-coding">Manampilkan Markdown</a></li>
+                                    <li><a href="#" class="record-data" data-action="random-article" data-position="interactive-coding">Bahan-bahan Belajar Kotlin</a></li>
+                                    <li><a href="#" class="record-data" data-action="random-article" data-position="interactive-coding">Google Siapkan 100.000 Developer Android Hingga 2020</a></li>
+                                    <li><a href="#" class="record-data" data-action="random-article" data-position="interactive-coding">6 Bahasa Pemrograman Baru yang Wajib Dipelajari Tahun 2016</a></li>
+                                    <li><a href="#" class="record-data" data-action="random-article" data-position="interactive-coding">Manampilkan Markdown</a></li>
                                     <li><a href="https://www.codepolitan.com/15-karakteristik-programmer-yang-baik-5a6d9b9a5f419" class="record-data" data-action="random-article" data-position="interactive-coding">15 Karakteristik Programmer yang Baik</a></li>
                              	</ul>
                             </div>
@@ -116,19 +82,20 @@
 
                                 <h4 class="no-margin-top">Description</h4>
 
-                                <p>Belajar coding secara interaktif membahas tentang bahasa pemrograman C</p>
+                                <p>{{ lesson.materi }}</p>
 
                                 <ul class="lesson-loop">
                                         <h4>Sintaks Dasar</h4>
                                         <li>
                                             <span class="lesson-count">1</span>
-                                            	<a href="https://www.codepolitan.com/interactive-coding/c/hello-world">Hello World</a>
+                                            	<a href="#">Hello World</a>
 
                                             <span class="pull-right">
-                                                <a href="https://www.codepolitan.com/interactive-coding/c/hello-world" class="btn btn-sm btn-primary margin-sm-left btn-padding-md">Learn</a>
+                                                <a href="#" class="btn btn-sm btn-primary margin-sm-left btn-padding-md">Learn</a>
                                             </span>
                                         </li>
                                 </ul>
+                            </div>
                         </article>
                     </div>
                 </div>
@@ -139,31 +106,4 @@
 
     </div>
     <!-- END: MAIN WRAPPER -->
-
-<!-- FOOTER -->
-	<footer class="cp-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="footer-copyright">
-						Copyright &copy; 2018 <a href="https://www.codepolitan.com">CodePolitan</a>. All rights reserved.
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="footer-menu">
-						<ul>
-							<li><a href="https://www.codepolitan.com/about" class="record-data" data-action="view-about" data-position="general-footer">About</a></li>
-							<li><a href="https://www.codepolitan.com/how-to-start" class="record-data" data-action="view-term" data-position="general-footer">Term & Condition</a></li>
-							<!--<li><a href="https://www.codepolitan.com/publikasi-event" class="record-data" data-action="view-media-partner" data-position="general-footer">Media Partner</a></li>-->
-							<li><a href="https://www.codepolitan.com/contact" class="record-data" data-action="view-contact" data-position="general-footer">Contact Us</a></li>
-							<li><a href="https://www.codepolitan.com/statistics" class="record-data" data-action="view-stat" data-position="general-footer">Stat</a></li>
-							<li><a href="https://www.codepolitan.com/credit-to-bug-reporter" target="_blank" class="record-data" data-action="go-credit" data-position="general-footer">Credit</a></li>
-							<li><a href="http://www.produktif.net/" target="_blank" class="record-data" data-action="go-produktif" data-position="general-footer">Store</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- END: FOOTER -->
 {% endblock %}

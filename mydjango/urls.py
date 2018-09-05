@@ -27,5 +27,7 @@ urlpatterns = [
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
-    url(r'^(?P<code_name>[-\w]+)/$', views.course, name='course'),
+    url(r'^course/(?P<code_name>[-\w]+)/$', views.course, name='course'),
+    url(r'^firstprogramming/(?P<code_name_lesson>[-\w]+)/$', views.lesson, name='lesson'),
+
 ]
