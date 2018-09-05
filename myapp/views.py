@@ -32,5 +32,7 @@ def signup(request):
                 form = SignUpForm()
             return render(request, 'registration/signup.html', {'form': form})
 
-def course(request):
-    return render (request, 'course.html')
+def course(request,code_name):
+    course = Course.objects.get(code_name=code_name)
+    return render (request, 'course.html', {'course': course})
+
