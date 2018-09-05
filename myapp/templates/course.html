@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	<!-- MAIN WRAPPER -->
+	<div class="cp-wrapper margin-top-wrapper">
+
+		<!-- SECTION UPDATES -->
+		<section class="content-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<article class="main-content margin-bottom tutspaging" id="article-content">
+
+							<div class="content-head">
+								<div class="content-author">
+									<div class="media">
+										<div class="media-left">
+											<div class="content-avatar">
+												<a href="https://www.codepolitan.com/coder/Geeraldo"><img src="https://www.gravatar.com/avatar/fe3d7ccb86643b3375a2ba7f3490b52e?s=100" class="img-avatar"></a>
+											</div>
+										</div>
+										<div class="media-body">
+											<div class="content-name"><span class="content-authorname "><a href="https://www.codepolitan.com/coder/Geeraldo">{{ course.author }}</a></span></div>
+											<div class="content-position"></div>
+											<div class="content-date">Aug 14, 2018</div>
+										</div>
+									</div>
+								</div>
+								<h1>{{ course.name }}</h1>
+							</div>
+
+							<img src="/{{ course.img }}" class="full-width">
+
+							<div class="content-body">
+
+								<div class="step-contents tab-content">
+									<div class="tab-pane step active result_scroll">
+										<div id="main_content_post">
+									        {{ course.content }}
+										</div>
+									</div>
+								</div>
+
+						</article>
+						<!-- ARTIKEL TERKAIT
+						<div class="content-loop">
+							<div class="row">
+																										<div class="col-md-4">
+										<div class="post-item small-post small-margin">
+											<div class="post-thumb">
+												<a href="https://www.codepolitan.com/apa-perbedaan-vpn-dengan-proxy-mana-yang-harus-kamu-gunakan-58eb405cb81fe" title="Apa perbedaan VPN dengan Proxy? Mana Yang Harus Kamu Gunakan?" class="record-data" data-action="related-article" data-position="article-detail">
+													<img src="https://static.cdn-cdpl.com/250x150/c420ea5d6888e29a87437c2d005edd57/VPN-VS-PROXY-COMPARISON-640x360.jpg" class="thumb-img" alt="Apa perbedaan VPN dengan Proxy? Mana Yang Harus Kamu Gunakan?">
+												</a>
+											</div>
+											<div class="post-body">
+												<div class="post-category"><a href="https://www.codepolitan.com/category/info">Info</a></div>
+												<h3 class="post-title" style="font-size:16px;">
+													<a href="https://www.codepolitan.com/apa-perbedaan-vpn-dengan-proxy-mana-yang-harus-kamu-gunakan-58eb405cb81fe" title="Apa perbedaan VPN dengan Proxy? Mana Yang Harus Kamu Gunakan?" class="record-data" data-action="related-article" data-position="article-detail" data-id="https://www.codepolitan.com/apa-perbedaan-vpn-dengan-proxy-mana-yang-harus-kamu-gunakan-58eb405cb81fe">
+													Apa perbedaan VPN dengan Proxy? Mana Yang Harus Kamu Gunakan?
+													</a>
+												</h3>
+												<div class="post-author"><a href="https://www.codepolitan.com/coder/hadyanpalupi">Hadyan Palupi</a></div>
+											</div>
+										</div>
+									</div>
+																								</div>
+						</div>
+						 END: ARTIKEL TERKAIT -->
+
+
+
+					</div>
+
+					<div class="col-md-4">
+
+						<div style="border:1px solid #FEFEFE; padding:20px; border-radius: 10px; background:#ffffff; margin-bottom:50px; box-shadow: 1px 1px 2px 0 rgba(0,0,0,.1);">
+	<h4 style="font-size:20px; font-weight:bold; margin-top:0px; line-height:30px;">Ingin Belajar Coding Dibimbing oleh Instruktur?</h4>
+
+    <p>Ikuti program CodePolitan Developer School sekarang juga, rasakan manfaat dalam percepatan belajarmu.</p>
+    <p><a href="https://devschool.id/" class="btn btn-default record-data" data-action="goto-devschool" data-position="sidebar-offering" target="_blank">Selengkapnya</a></p>
+</div>
+
+						<!-- SIDEBAR -->
+						<div class="sidebar-social-share">
+							<h3>Share This Post</h3>
+
+							<div class="share-icon-wrapper">
+								<ul>
+									<li><a href="#" text="Apa yang Sebenarnya Dilakukan Incognito Mode " url="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" social="facebook" class="btn-share social-facebook"><i class="fa fa-facebook-official"></i></a></li>
+									<li><a href="#" text="Apa yang Sebenarnya Dilakukan Incognito Mode " url="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" social="twitter" class="btn-share social-twitter"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#" text="Apa yang Sebenarnya Dilakukan Incognito Mode " url="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" social="googleplus" class="btn-share social-google-plus"><i class="fa fa-google-plus"></i></a></li>
+									<li><a href="#" text="Apa yang Sebenarnya Dilakukan Incognito Mode " url="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" social="linkedin" class="btn-share social-linkedin"><i class="fa fa-linkedin-square"></i></a></li>
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="sidebar-recommended-post">
+							<h3>Recommended articles</h3>
+
+							<div class="sidebar-body">
+								<ul>
+																		<li><a href="https://www.codepolitan.com/trik-menggunakan-ikon-sendiri-saat-font-awesome-kurang-lengkap-5aa773430cc72" class="record-data" data-action="recommended-article" data-position="article-detail">Trik Menggunakan Ikon Sendiri Saat Font Awesome Kurang Lengkap</a></li>
+																		<li><a href="https://www.codepolitan.com/menjadi-developer-web-dengan-python-dan-flask-hello-world-5a3b1af29b052" class="record-data" data-action="recommended-article" data-position="article-detail">Menjadi Developer Web dengan Python dan Flask Bagian I: Hello World</a></li>
+																		<li><a href="https://www.codepolitan.com/kumpulan-aplikasi-terminal-untuk-windows-59dc4cce62ef9" class="record-data" data-action="recommended-article" data-position="article-detail">Kumpulan Aplikasi Terminal untuk Windows</a></li>
+																		<li><a href="https://www.codepolitan.com/mengambangkan-game-unity-samsung-gear-vr" class="record-data" data-action="recommended-article" data-position="article-detail">Mengembangkan Game Unity ke Samsung Gear VR</a></li>
+																		<li><a href="https://www.codepolitan.com/trend-dunia-programming-menurut-github-octoverse-2016-57db610d468fb-346" class="record-data" data-action="recommended-article" data-position="article-detail">Trend Dunia Programming menurut Github Octoverse 2016</a></li>
+																	</ul>
+							</div>
+						</div>
+
+						<div class="sidebar-banner margin-lg-top" id="target_scroll">
+    <a href="https://premium.codepolitan.com/" class="record-data margin-lg-top" target="_blank" data-action="goto-premium" data-position="article-detail-banner">
+    	<img src="https://static.cdn-cdpl.com/source/b8e29e8f0b15aab3473fed5df06c9186/banner_premium.jpg" class="full-width">
+    </a>
+</div>
+						<!-- END: SIDEBAR -->
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- END: SECTION UPDATES -->
+
+	</div>
+	<!-- END: MAIN WRAPPER -->
+
+	<div id="thanks" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+	    	<div class="modal-content">
+		      	<div class="modal-header">
+		        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        	<h4 class="modal-title">People who give thanks</h4>
+	      		</div>
+			   	<div class="modal-body">
+			        <div class="people"></div>
+			   	</div>
+	    	</div>
+	  	</div>
+	</div>
+
+	<input type="hidden" id="post_id" value="25186">
+	<input type="hidden" id="base_url" value="https://www.codepolitan.com">
+{% endblock %}
