@@ -36,3 +36,5 @@ def course(request,code_name):
     course = Course.objects.get(code_name=code_name)
     return render (request, 'course.html', {'course': course})
 
+def contact(request):
+    return render (request, 'contact.html')
