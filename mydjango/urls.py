@@ -30,4 +30,7 @@ urlpatterns = [
     url(r'^course/(?P<code_name>[-\w]+)/$', views.course, name='course'),
     url(r'^firstprogramming/(?P<code_name>[-\w]+)/$', views.lesson, name='lesson'),
     url(r'^contact/$', views.contact, name='contact'),
+    url(r'^about/$', views.about, name='about'),
+    url(r'^terms/$', views.terms, name='terms'),
+    url(r'^store/$', views.store, name='store'),
 ]
