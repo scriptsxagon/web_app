@@ -47,4 +47,13 @@ def learn(request,code_name, name):
     return render (request, 'learn.html', {'code_name': code_name, 'name': name})
 
 def contact(request):
-    return render (request, 'contact.html')
+    return render (request, 'footer/contact.html', {'contact': contact})
+
+def about(request):
+    return render (request, 'footer/about.html', {'about': about})
+
+def terms(request):
+    return render (request, 'footer/terms.html', {'terms': terms})
+
+def store(request):
+    return render (request, 'footer/store.html', {'store': store})
