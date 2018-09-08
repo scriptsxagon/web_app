@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	<!-- MAIN WRAPPER -->
+	<div class="cp-wrapper margin-top-wrapper">
+
+		<!-- SECTION UPDATES -->
+		<section class="content-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+
+						<div style="border:1px solid #FEFEFE; padding:20px; border-radius: 10px; background:#ffffff; margin-bottom:50px; box-shadow: 1px 1px 2px 0 rgba(0,0,0,.1);">
+	<h4 style="font-size:20px; font-weight:bold; margin-top:0px; line-height:30px;">Ingin Belajar Coding Dibimbing oleh Instruktur?</h4>
+
+    <p>Ikuti program CodePolitan Developer School sekarang juga, rasakan manfaat dalam percepatan belajarmu.</p>
+    <p><a href="https://devschool.id/" class="btn btn-default record-data" data-action="goto-devschool" data-position="sidebar-offering" target="_blank">Selengkapnya</a></p>
+</div>
+
+						<!-- SIDEBAR -->
+						<div class="sidebar-social-share">
+							<h3>Share This Post</h3>
+
+							<div class="share-icon-wrapper">
+								<ul>
+									<li><a href="#" text="Apa yang Sebenarnya Dilakukan Incognito Mode " url="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" social="facebook" class="btn-share social-facebook"><i class="fa fa-facebook-official"></i></a></li>
+									<li><a href="#" text="Apa yang Sebenarnya Dilakukan Incognito Mode " url="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" social="twitter" class="btn-share social-twitter"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#" text="Apa yang Sebenarnya Dilakukan Incognito Mode " url="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" social="googleplus" class="btn-share social-google-plus"><i class="fa fa-google-plus"></i></a></li>
+									<li><a href="#" text="Apa yang Sebenarnya Dilakukan Incognito Mode " url="https://www.codepolitan.com/apa-yang-sebenarnya-dilakukan-incognito-mode-5b4c1efaefa96" social="linkedin" class="btn-share social-linkedin"><i class="fa fa-linkedin-square"></i></a></li>
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="sidebar-recommended-post">
+							<h3>Recommended articles</h3>
+
+							<div class="sidebar-body">
+								<ul>
+									<li><a href="#">Trik Menggunakan Ikon Sendiri Saat Font Awesome Kurang Lengkap</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="sidebar-banner margin-lg-top" id="target_scroll">
+    						<a href="https://premium.codepolitan.com/" class="record-data margin-lg-top" target="_blank" data-action="goto-premium" data-position="article-detail-banner">
+					    	<img src="https://static.cdn-cdpl.com/source/b8e29e8f0b15aab3473fed5df06c9186/banner_premium.jpg" class="full-width">
+    						</a>
+						</div>
+						<!-- END: SIDEBAR -->
+
+
+					</div>
+					<div class="col-md-8">
+						<article class="main-content margin-bottom tutspaging" id="article-content">
+
+							<div class="content-head">
+								<div class="content-author">
+									<div class="media">
+										<div class="media-left">
+											<div class="content-avatar">
+												<a href="https://www.codepolitan.com/coder/Geeraldo"><img src="https://www.gravatar.com/avatar/fe3d7ccb86643b3375a2ba7f3490b52e?s=100" class="img-avatar"></a>
+											</div>
+										</div>
+										<div class="media-body">
+											<div class="content-name"><span class="content-authorname "><a href="#">{{ learn.author }}</a></span></div>
+											<div class="content-position"></div>
+											<div class="content-date">Aug 14, 2018</div>
+										</div>
+									</div>
+								</div>
+								<h1>{{ learn.name }}</h1>
+							</div>
+
+							<center>
+								<img src="/{{ learn.img }}" height="50%" width="70%">
+							</center>
+
+							<div class="content-body">
+
+								<div class="step-contents tab-content">
+									<div class="tab-pane step active result_scroll">
+										<div id="main_content_post">
+									        {{ learn.content|safe }}
+										</div>
+									</div>
+								</div>
+
+						</article>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- END: SECTION UPDATES -->
+
+	</div>
+	<!-- END: MAIN WRAPPER -->
+{% endblock %}

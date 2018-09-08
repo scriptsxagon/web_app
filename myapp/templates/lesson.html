@@ -14,14 +14,14 @@
                         <div class="media">
                             <div class="media-left">
                                 <div class="course-logo">
-                                    <img src="https://static.cdn-cdpl.com/source/00600bfb26f44c7427a680235c2e3042/c-lang.png" class="logo-img" alt="">
+                                    <img src="/{{ lesson.img }}" class="logo-img" alt="">
                                 </div>
                             </div>
                             <div class="media-body">
                                 <div class="course-info">
                                     <div class="course-info-box">
-                                        <h1 class="course-title">C</h1>
-                                        <div class="course-intro">Belajar coding secara interaktif membahas tentang bahasa pemrograman C</div>
+                                        <h1 class="course-title">{{ lesson.code_name }}</h1>
+                                        <div class="course-intro">{{ lesson.materi }}</div>
                                         <div>Total Lessons: <span class="text-color-primary">37</span></div>
                                     </div>
                                 </div>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="course-info-right">
-                        	<a href="https://www.codepolitan.com/interactive-coding/join/c" class="btn btn-default btn-lg btn-block record-data" data-action="join-course" data-position="interactive-coding">Join Course</a>
+                        	<a href="#" class="btn btn-default btn-lg btn-block record-data" data-action="join-course" data-position="interactive-coding">Join Course</a>
                             <div class="course-total-user"><span class="fa fa-user margin-xs-right"></span> 2308 peoples joined this course </div>
                         </div>
                     </div>
@@ -86,14 +86,16 @@
 
                                 <ul class="lesson-loop">
                                         <h4>Sintaks Dasar</h4>
+                                    {% for learn in learn %}
                                         <li>
-                                            <span class="lesson-count">1</span>
-                                            	<a href="#">Hello World</a>
+                                            <span class="lesson-count">{{ learn.nomer }}</span>
+                                            	<a href="/firstprogramming/{{ learn.code_name }}/{{ learn.name }}/">{{ learn.name }}</a>
 
                                             <span class="pull-right">
-                                                <a href="#" class="btn btn-sm btn-primary margin-sm-left btn-padding-md">Learn</a>
+                                                <a href="/firstprogramming/{{ learn.code_name }}/{{ learn.name }}/" class="btn btn-sm btn-primary margin-sm-left btn-padding-md">Learn</a>
                                             </span>
                                         </li>
+                                {% endfor %}
                                 </ul>
                             </div>
                         </article>
