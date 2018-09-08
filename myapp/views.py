@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import UpdateView,ListView
-from myapp.models import Course, Lesson, Event
+from myapp.models import Course, Lesson, Event, Learn
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from myapp.forms import SignUpForm
 
@@ -37,8 +37,14 @@ def course(request,code_name):
     return render (request, 'course.html', {'course': course})
 
 def lesson(request,code_name):
+    learn = Learn.objects.all().order_by('order')
     lesson = Lesson.objects.get(code_name=code_name)
-    return render (request, 'lesson.html', {'lesson': lesson})
+    return render (request, 'lesson.html', {'lesson': lesson, 'learn': learn})
+
+def learn(request,code_name, name):
+    code_name = Learn.objects.filter(code_name=code_name)
+    name = Learn.objects.filter(name=name)
+    return render (request, 'learn.html', {'code_name': code_name, 'name': name})
 
 def contact(request):
     return render (request, 'contact.html')

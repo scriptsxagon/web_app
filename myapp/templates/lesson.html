@@ -86,14 +86,16 @@
 
                                 <ul class="lesson-loop">
                                         <h4>Sintaks Dasar</h4>
+                                    {% for learn in learn %}
                                         <li>
-                                            <span class="lesson-count">1</span>
-                                            	<a href="#">Hello World</a>
+                                            <span class="lesson-count">{{ learn.nomer }}</span>
+                                            	<a href="/firstprogramming/{{ learn.code_name }}/{{ learn.name }}/">{{ learn.name }}</a>
 
                                             <span class="pull-right">
-                                                <a href="#" class="btn btn-sm btn-primary margin-sm-left btn-padding-md">Learn</a>
+                                                <a href="/firstprogramming/{{ learn.code_name }}/{{ learn.name }}/" class="btn btn-sm btn-primary margin-sm-left btn-padding-md">Learn</a>
                                             </span>
                                         </li>
+                                {% endfor %}
                                 </ul>
                             </div>
                         </article>
