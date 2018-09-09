@@ -57,3 +57,6 @@ def terms(request):
 
 def store(request):
     return render (request, 'footer/store.html', {'store': store})
+
+def navcourse(request):
+    return render (request, 'navigasi/navcourse.html', {'navcourse': navcourse})
