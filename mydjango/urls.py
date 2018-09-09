@@ -34,4 +34,5 @@ urlpatterns = [
     url(r'^about/$', views.about, name='about'),
     url(r'^terms/$', views.terms, name='terms'),
     url(r'^store/$', views.store, name='store'),
+    url(r'^navcourse/$', views.navcourse, name='navcourse'),
 ]
