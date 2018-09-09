@@ -5,4 +5,4 @@ __pycache__/
 
 
 # SQLite database files
-*.sqlite
+*.sqlite3
