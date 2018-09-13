@@ -79,12 +79,11 @@
 {% endif %}
 			<ul class="nav navbar-nav navbar">
 				<li ><a href="/navcourse/">COURSES</a></li>
-				<li ><a target="_blank" href="#">FIRST PROGRAMMING</a></li>
+				<li ><a href="#">FIRST PROGRAMMING</a></li>
 		        <li ><a href="#">EVENT</a></li>
-		        <li ><a href="#"></a></li>
 		    </ul>
 				{% if user.is_authenticated %}
-<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-right">
 									<li class="nav-btn nav-signup"><a href="#" class="record-data" data-action="submit-article" data-position="general-navbar"><i class="fa fa-pencil-square margin-xs-right"></i> Tulis Artikel</a></li>
 					<li class="dropdown dropdown-cp ">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -126,7 +125,7 @@
 							</div>
 						</div>
 					</li>
-								</ul>{% else %}
+				</ul>{% else %}
 			{% endif %}
 		</div>
 	</div>
