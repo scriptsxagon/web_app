@@ -59,4 +59,5 @@ def store(request):
     return render (request, 'footer/store.html')
 
 def navcourse(request):
-    return render (request, 'navigasi/navcourse.html')
+    course = Course.objects.all().order_by('order')
+    return render (request, 'navigasi/navcourse.html', {'courses' : course})

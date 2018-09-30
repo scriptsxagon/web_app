@@ -8,11 +8,8 @@
 		<!-- SECTION JUMBOTRON -->
 		<section class="cp-jumbotron jumbotron-article">
 			<div class="container">
-				<h1>Berbagi Pengetahuan</h1>
-				<p>Saling berbagi pengetahuan seputar pemrograman dan teknologi. Kita bisa jika semua terlibat dan saling memberi manfaat.<br /><a href="https://www.codepolitan.com/panduan-penulisan-artikel" class="record-data" data-action="how-to-submit-article" data-position="jumbotron" target="_blank">Baca panduan penulisan artikel</a>.</p>
-
-				                    <div class="margin-lg-top"><a href="https://www.codepolitan.com/users/login?callback=dashboard/article/add/post&amp;message=must-login" class="btn btn-border btn-lg record-data" data-action="submit-article" data-position="jumbotron"><i class="fa fa-pencil-square margin-xs-right"></i> Posting Article</a></div>
-
+				<h2>Label</h2>
+				<h1>Pembelajaran</h1>
 			</div>
 		</section>
 		<!-- END: SECTION JUMBOTRON -->
@@ -28,160 +25,26 @@
 						<!-- CONTENT LOOP -->
 						<div class="content-loop">
 							<div class="row">
-
-									<div class="col-md-4">
-										<div class="post-item">
-											<div class="post-thumb">
-												<a href="#">
-													<img src="https://static.cdn-cdpl.com/340x195/2b9f4ed2c46d42f883ab3439e02cd503/main-visual0-pc.png" class="thumb-img">
-												</a>
-											</div>
-											<div class="post-body">
-												<div class="post-category"><a href="#">News</a></div>
-												<h3 class="post-title"><a href="#">Ajak </a></h3>
-												<div class="post-author "><a href="#">Dicoding Indonesia</a></div>
-											</div>
-										</div>
+					{% for course in courses|slice:":12" %}
+							<div class="col-md-4">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="/course/{{ course.code_name }}/">
+											<img src="/{{ course.img }}/" class="thumb-img" >
+										</a>
 									</div>
+									<div class="post-body">
+										<div class="post-category"><a href="/course/{{ course.code_name }}/">{{ course.code_name }}</a></div>
+										<h3 class="post-title"><a href="/course/{{ course.code_name }}/">{{ course.name }}</a></h3>
+										<div class="post-author "><a href="/course/{{ course.code_name }}/">{{ course.author }}</a></div>
+									</div>
+								</div>
+							</div>
+					{% endfor %}
 
                             </div>
 						</div>
-						<!-- END: CONTENT LOOP -->
-
-						<!-- PAGINATION -->
-						<div class="pagination-wrapper">
-							<ul class="pagination"><li class="disabled"><span>&laquo;</span></li> <li class="active"><span>1</span></li><li><a href="https://www.codepolitan.com/articles?page=2">2</a></li><li><a href="https://www.codepolitan.com/articles?page=3">3</a></li><li><a href="https://www.codepolitan.com/articles?page=4">4</a></li><li><a href="https://www.codepolitan.com/articles?page=5">5</a></li><li><a href="https://www.codepolitan.com/articles?page=6">6</a></li><li><a href="https://www.codepolitan.com/articles?page=7">7</a></li><li><a href="https://www.codepolitan.com/articles?page=8">8</a></li><li class="disabled"><span>...</span></li><li><a href="https://www.codepolitan.com/articles?page=145">145</a></li><li><a href="https://www.codepolitan.com/articles?page=146">146</a></li> <li><a href="https://www.codepolitan.com/articles?page=2" rel="next">&raquo;</a></li></ul>
-						</div>
-						<!-- END: PAGINATION -->
-
-					</div>
-					<div class="col-md-3">
-
-						<!-- SIDEBAR -->
-						<div class="sidebar-popular-post">
-							<h3>Popular Articles</h3>
-
-							<div class="popular-loop">
-								<ul>
-																	</ul>
-							</div>
-						</div>
-
-
-						<!-- SIDEBAR TECHNOLOGY -->
-						<div class="sidebar-technology">
-	<h3>Technology</h3>
-
-	<div class="tech-loop">
-		<ul>
-			<li>
-				<a href="https://www.codepolitan.com/tag/javascript" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="javascript">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-js.png" class="img-circle"></div>
-					<div class="tech-title">JavaScript</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/php" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="php">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-php.png" class="img-circle"></div>
-					<div class="tech-title">PHP</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/python" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="python">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-python.png" class="img-circle"></div>
-					<div class="tech-title">Python</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/android" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="android">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-android.png" class="img-circle"></div>
-					<div class="tech-title">Android</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/java" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="java">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-java.png" class="img-circle"></div>
-					<div class="tech-title">Java</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/microcontroller" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="microcontroller">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-microcontroller.png" class="img-circle"></div>
-					<div class="tech-title">Microcontroller</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/angularjs" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="angularjs">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-angular.png" class="img-circle"></div>
-					<div class="tech-title">Angular.js</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/nodejs" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="nodejs">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-nodejs.png" class="img-circle"></div>
-					<div class="tech-title">Node.js</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/reactjs" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="reactjs">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-reactjs.png" class="img-circle"></div>
-					<div class="tech-title">React.js</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/ruby" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="ruby">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-ruby.png" class="img-circle"></div>
-					<div class="tech-title">Ruby</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/html" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="html">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-html.png" class="img-circle"></div>
-					<div class="tech-title">HTML</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/django" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="django">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-django.png" class="img-circle"></div>
-					<div class="tech-title">Django</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/jquery" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="jquery">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-jquery.png" class="img-circle"></div>
-					<div class="tech-title">JQuery</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/internet-of-things" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="internet-of-things">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-iot.png" class="img-circle"></div>
-					<div class="tech-title">Internet of Things</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/open-source" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="open-source">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-opensource.png" class="img-circle"></div>
-					<div class="tech-title">Open Source</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/virtual-reality" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="virtual-reality">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-vr.png" class="img-circle"></div>
-					<div class="tech-title">Virtual Reality</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/game-development" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="game-development">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-game.png" class="img-circle"></div>
-					<div class="tech-title">Game Development</div>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.codepolitan.com/tag/database" class="tech-item record-data" data-action="tag-article" data-position="article-sidebar" data-id="database">
-					<div class="tech-logo"><img src="assets/img/logo/sidebar-logo-database.png" class="img-circle"></div>
-					<div class="tech-title">Database</div>
-				</a>
-			</li>
+						<!-- END: CONTENT LOOP --
 
 			<!--
 			Ruby on Rails
